@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | ACN Portafolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <header class="sidebar" id="sidebar">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
+        <nav>
+            <ul class="list-unstyled">
+                <li class="mb-4"><a class="logo" href="home.html">ANA CERÓN</a></li>
+                <li class="mb-4"><a href="proyectos.html">PROYECTOS</a></li>
+                <li class="mb-4"><a href="#">SERVICIOS</a></li>
+                <li class="mb-4"><a href="#">BITÁCORA</a></li>
+            </ul>
+        </nav>
+        <div class="socials d-flex flex-column gap-4 mt-auto">
+            <a href="mailto:tu@correo.cl" aria-label="Correo">
+                <img src="assets/img/logo-mail.png" alt="Logo email" class="social-icon">
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn">
+                <img src="assets/img/logo-linkedin.png" alt="Logo LinkedIn" class="social-icon">
+            </a>
+            <a href="#" target="_blank" aria-label="GitHub">
+                <img src="assets/img/logo-github.png" alt="Logo Github" class="social-icon">
+            </a>
+            <a href="#" target="_blank" aria-label="Behance">
+                <img src="assets/img/logo-behance.png" alt="Logo Behance" class="social-icon">
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <h1>PROYECTOS</h1>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section class="section">
+            <h2 class="section-title">EXPLORA MI PORTAFOLIO</h2>
+            <div class="row g-2 projects-grid">
+
+                <article class="col-6 project-card">
+                    <div class="project-media">
+                        <img class="project-thumbnail" src="assets/img/capacitaciones-proyecto.png" alt="Proyecto Capacitaciones MASS">
+                        <video class="project-video" autoplay loop muted playsinline>
+                            <source src="assets/video/video-allendes-hermanos.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h3><a href="#">CAPACITACIONES MASS</a></h3>
+                    <span class="project-category">ELEARNING</span>
+                </article>
+
+                <article class="col-6 project-card">
+                    <div class="project-media">
+                        <img class="project-thumbnail" src="assets/img/fanstore-gaga-proyecto.png" alt="Fanstore Lady Gaga">
+                        <video class="project-video" autoplay loop muted playsinline>
+                            <source src="assets/video/video-fanstore-lady-gaga.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h3><a href="#">FANSTORE LADY GAGA</a></h3>
+                    <span class="project-category">ECOMMERCE</span>
+                </article>
+
+                <article class="col-6 project-card">
+                    <div class="project-media">
+                        <img class="project-thumbnail" src="assets/img/capacitaciones-proyecto.png" alt="Proyecto Capacitaciones MASS">
+                        <video class="project-video" autoplay loop muted playsinline>
+                            <source src="assets/video/video-allendes-hermanos.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h3><a href="#">ALLENDES HNOS REDISEÑO</a></h3>
+                    <span class="project-category">DISEÑO UX/UI</span>
+                </article>
+
+                <article class="col-6 project-card">
+                    <div class="project-media">
+                        <img class="project-thumbnail" src="assets/img/fanstore-gaga-proyecto.png" alt="Fanstore Lady Gaga">
+                        <video class="project-video" autoplay loop muted playsinline>
+                            <source src="assets/video/video-fanstore-lady-gaga.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h3><a href="#">NIGHTZINE</a></h3>
+                    <span class="project-category">CSM</span>
+                </article>
+
+            </div>
+        </section>
+
+        <footer>
+            ©2026 | Ana Cerón Novoa
+        </footer>
+
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

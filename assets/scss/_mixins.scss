@@ -1,0 +1,24 @@
+// ============================================================
+// MIXINS
+// ============================================================
+
+// Media query mobile
+@mixin mobile {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+// Texto truncado en una línea
+@mixin truncar {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// Centrar con flexbox
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

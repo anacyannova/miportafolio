@@ -1,0 +1,495 @@
+// ============================================================
+// VARIABLES BOOTSTRAP (sobrescriben ANTES del @import)
+// ============================================================
+
+$primary:   #0084FF;
+$secondary: #709AC4;
+$body-bg:   #0E1117;
+$body-color: #F5F7FA;
+
+// Tipografía
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
+$headings-font-family:   'Outfit', sans-serif;
+$headings-font-weight:   300;
+
+// Botones
+$btn-border-radius: 0;
+$btn-padding-x:     2.5rem;
+$btn-padding-y:     0.75rem;
+$btn-font-size:     0.875rem;
+$btn-font-family:   'Outfit', sans-serif;
+
+// ============================================================
+// PARTIALS PREVIOS AL IMPORT
+// ============================================================
+
+@import 'variables';
+@import 'mixins';
+
+// ============================================================
+// BOOTSTRAP
+// ============================================================
+
+@import "../bootstrap-5.3.8/scss/bootstrap";
+
+// ============================================================
+// ESTILOS PROPIOS
+// ============================================================
+
+@import 'generales';
+
+// ============================================================
+// SIDEBAR / HEADER NAV
+// ============================================================
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-titulo);
+    z-index: 100;
+    background-color: var(--fondo-principal);
+}
+
+.theme-toggle {
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--texto-apagado);
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+    margin-bottom: 32px;
+    flex-shrink: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--texto-apagado);
+        transition: transform 0.2s, background 0.2s;
+    }
+}
+
+:root.light .theme-toggle::after {
+    transform: translateX(20px);
+    background: var(--acento);
+}
+
+.sidebar a {
+    color: var(--texto-apagado);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s;
+
+    &:hover { color: var(--acento); }
+}
+
+.logo {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--texto-apagado);
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+    transition: filter 0.2s;
+}
+
+.socials a:hover .social-icon {
+    filter: invert(55%) sepia(60%) saturate(500%) hue-rotate(185deg) brightness(105%);
+}
+
+.menu-toggle { display: none; }
+
+// ============================================================
+// MAIN
+// ============================================================
+
+main {
+    margin-left: 220px;
+    padding: 0 80px 0 0;
+}
+
+// ============================================================
+// HERO
+// ============================================================
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 100px;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.breadcrumb {
+    font-family: var(--font-texto);
+    color: var(--texto-principal);
+    font-size: 13px;
+    text-transform: lowercase;
+    letter-spacing: 3%;
+}
+
+.hero h1 {
+    font-size: 64px;
+    letter-spacing: 3%;
+    margin-top: 10px;
+    line-height: 1.1;
+    padding-right: 60px;
+}
+
+.hero h2 {
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+.hero p {
+    margin-top: 25px;
+    max-width: 400px;
+    line-height: 1.7;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+}
+
+// ============================================================
+// BTN (sobreescribe Bootstrap)
+// ============================================================
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    background: var(--texto-principal);
+    color: var(--texto-apagado);
+    border: none;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, color 0.2s;
+
+    &::after {
+        content: '→';
+        opacity: 0;
+        transform: translateX(-6px);
+        transition: opacity 0.2s, transform 0.2s;
+        font-size: 16px;
+    }
+
+    &:hover {
+        background: var(--acento-apagado);
+        color: var(--texto-principal);
+        font-weight: 600;
+
+        &::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+// ============================================================
+// SECTIONS
+// ============================================================
+
+.section { margin-top: 60px; }
+
+.section-title {
+    font-size: 36px;
+    letter-spacing: 3%;
+    margin-bottom: 50px;
+    color: var(--texto-principal);
+    text-transform: uppercase;
+}
+
+// ============================================================
+// PROYECTOS DESTACADOS
+// ============================================================
+
+.project-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--fondo-secundario);
+}
+
+.project-thumbnail {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: auto;
+    z-index: 1;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.project-card h3 {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 21px;
+    letter-spacing: 3%;
+
+    a {
+        color: var(--texto-principal);
+        text-decoration: none;
+        transition: color 0.2s;
+        &:hover { color: var(--acento); }
+    }
+}
+
+.project-category {
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: var(--texto-principal);
+    letter-spacing: 3%;
+}
+
+// ============================================================
+// BIO & SKILLS
+// ============================================================
+
+.bio-skills {
+    margin-top: 160px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.bio-symbol {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 6px;
+}
+
+blockquote {
+    font-size: 21px;
+    line-height: 150%;
+    margin-bottom: 30px;
+    margin-left: 72px;
+    font-style: normal;
+}
+
+.bio-text p {
+    line-height: 150%;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.skills {
+    max-width: 280px;
+
+    span {
+        border: 1px solid var(--tag);
+        padding: 6px 14px;
+        font-size: 11px;
+        font-family: var(--font-titulo);
+        color: var(--tag);
+        letter-spacing: 3%;
+        border-radius: 30px;
+    }
+}
+
+// ============================================================
+// TARJETAS SERVICIOS
+// ============================================================
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        transition: filter 0.4s ease;
+    }
+
+    &:hover img { filter: blur(8px) brightness(0.85); }
+    &:hover .service-overlay { opacity: 1; }
+}
+
+.service-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    h3 {
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 3%;
+        color: var(--texto-principal);
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--texto-principal);
+    }
+}
+
+// ============================================================
+// BITÁCORA BANNER
+// ============================================================
+
+.bitacora-banner {
+    margin-top: 160px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin-right: -80px;
+
+    .bitacora-image {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .bitacora-content {
+        background: var(--fondo-secundario);
+        padding: 60px;
+
+        h2 {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 3%;
+            color: var(--texto-principal);
+        }
+
+        p {
+            line-height: 150%;
+            color: var(--texto-principal);
+            font-size: 18px;
+        }
+    }
+}
+
+// ============================================================
+// FOOTER
+// ============================================================
+
+footer {
+    text-align: right;
+    margin-top: 120px;
+    padding-bottom: 40px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+// ============================================================
+// RESPONSIVE BORGIR
+// ============================================================
+
+@include mobile {
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 200;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+
+        span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--texto-principal);
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        &.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        &.active span:nth-child(2) { opacity: 0; }
+        &.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+        &.open { transform: translateX(0); }
+    }
+
+    main {
+        margin-left: 0;
+        padding: 80px 24px 40px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        min-height: auto;
+
+        h1 { font-size: 40px; }
+        h2 { font-size: 28px; }
+    }
+
+    .hero-image { order: -1; }
+
+    .projects-grid {
+        margin-left: -24px;
+        margin-right: -24px;
+
+        .project-card { width: 100%; }
+        .project-card h3,
+        .project-category { padding-left: 24px; }
+    }
+
+    .bio-skills {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 80px;
+    }
+
+    .services-grid .service-card { width: 100%; }
+
+    .bitacora-banner {
+        grid-template-columns: 1fr;
+        margin-right: -24px;
+    }
+}

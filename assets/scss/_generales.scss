@@ -1,0 +1,39 @@
+// ============================================================
+// RESET
+// ============================================================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo-principal);
+    color: var(--texto-principal);
+    font-family: var(--font-texto);
+}
+
+// ============================================================
+// TIPOGRAFÍA BASE
+// ============================================================
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titulo);
+    font-weight: 300;
+    color: var(--texto-principal);
+}
+
+p {
+    font-family: var(--font-texto);
+    color: var(--texto-principal);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--texto-apagado);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover { color: var(--acento); }
+}

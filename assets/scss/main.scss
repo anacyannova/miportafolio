@@ -168,45 +168,23 @@ main {
     display: block;
 }
 
-// ============================================================
-// BTN (sobreescribe Bootstrap) — usa paleta "Colores botón 1"
-// ============================================================
+
+// *** BTN (sobreescribe Bootstrap) — cambia con el toggle dark/light ***//
 
 .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    @include btn-base;
     margin-top: 25px;
-    background: var(--btn1-fondo);
-    color: var(--btn1-letra);
-    border: none;
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    transition: background 0.2s, color 0.2s;
-
-    &::after {
-        content: '→';
-        opacity: 0;
-        transform: translateX(-6px);
-        transition: opacity 0.2s, transform 0.2s;
-        font-size: 16px;
-    }
+    padding: 12px 40px;
+    background: var(--btn-fondo);
+    color: var(--btn-letra);
 
     &:hover {
-        background: var(--btn1-fondo-hover);
-        color: var(--btn1-letra-hover);
-        font-weight: 600;
-
-        &::after {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        background: var(--btn-fondo-hover);
+        color: var(--btn-letra-hover);
     }
 }
 
-// ============================================================
-// SECTIONS
-// ============================================================
+//*** SECTIONS ***//
 
 .section { margin-top: 60px; }
 

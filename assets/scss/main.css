@@ -12169,30 +12169,25 @@ main {
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 25px;
-  background: var(--btn1-fondo);
-  color: var(--btn1-letra);
-  border: none;
+  font-family: var(--font-titulo);
+  font-size: 21px;
   font-weight: 400;
-  letter-spacing: 0.03em;
+  border: none;
+  cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
-.btn::after {
-  content: "→";
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.2s, transform 0.2s;
-  font-size: 16px;
-}
 .btn:hover {
-  background: var(--btn1-fondo-hover);
-  color: var(--btn1-letra-hover);
   font-weight: 600;
 }
-.btn:hover::after {
-  opacity: 1;
-  transform: translateX(0);
+.btn {
+  margin-top: 25px;
+  padding: 12px 40px;
+  background: var(--btn-fondo);
+  color: var(--btn-letra);
+}
+.btn:hover {
+  background: var(--btn-fondo-hover);
+  color: var(--btn-letra-hover);
 }
 
 .section {

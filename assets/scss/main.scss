@@ -1,6 +1,4 @@
-// ============================================================
-// VARIABLES BOOTSTRAP (sobrescriben ANTES del @import)
-// ============================================================
+// *** VARIABLES BOOTSTRAP (sobrescriben ANTES del @import) ***//
 
 $primary:   #0084FF;
 $secondary: #709AC4;
@@ -19,28 +17,20 @@ $btn-padding-y:     0.75rem;
 $btn-font-size:     0.875rem;
 $btn-font-family:   'Outfit', sans-serif;
 
-// ============================================================
-// PARTIALS PREVIOS AL IMPORT
-// ============================================================
+// *** PARTIALS PREVIOS AL IMPORT ***//
 
 @import 'variables';
 @import 'mixins';
 
-// ============================================================
-// BOOTSTRAP
-// ============================================================
+// *** BOOTSTRAP ***//
 
 @import "../bootstrap-5.3.8/scss/bootstrap";
 
-// ============================================================
-// ESTILOS PROPIOS
-// ============================================================
+// *** ESTILOS PROPIOS ***//
 
 @import 'generales';
 
-// ============================================================
-// SIDEBAR / HEADER NAV
-// ============================================================
+// *** SIDEBAR / HEADER NAV ***//
 
 .sidebar {
     position: fixed;
@@ -115,18 +105,14 @@ $btn-font-family:   'Outfit', sans-serif;
 
 .menu-toggle { display: none; }
 
-// ============================================================
-// MAIN
-// ============================================================
+// *** MAIN ***//
 
 main {
     margin-left: 220px;
     padding: 0 80px 0 0;
 }
 
-// ============================================================
-// HERO
-// ============================================================
+// *** HERO ***//
 
 .hero {
     display: grid;
@@ -168,7 +154,6 @@ main {
     display: block;
 }
 
-
 // *** BTN (sobreescribe Bootstrap) — cambia con el toggle dark/light ***//
 
 .btn {
@@ -184,7 +169,7 @@ main {
     }
 }
 
-//*** SECTIONS ***//
+// *** SECTIONS ***//
 
 .section { margin-top: 60px; }
 
@@ -196,9 +181,7 @@ main {
     text-transform: uppercase;
 }
 
-// ============================================================
-// PROYECTOS DESTACADOS
-// ============================================================
+// *** PROYECTOS DESTACADOS ***//
 
 .project-media {
     position: relative;
@@ -251,9 +234,7 @@ main {
     letter-spacing: 3%;
 }
 
-// ============================================================
-// BIO & SKILLS
-// ============================================================
+// *** BIO & SKILLS ***//
 
 .bio-skills {
     margin-top: 160px;
@@ -296,9 +277,7 @@ blockquote {
     }
 }
 
-// ============================================================
-// TARJETAS SERVICIOS
-// ============================================================
+// *** TARJETAS SERVICIOS ***//
 
 .service-card {
     position: relative;
@@ -342,9 +321,7 @@ blockquote {
     }
 }
 
-// ============================================================
-// BITÁCORA BANNER
-// ============================================================
+// *** BITÁCORA BANNER ***//
 
 .bitacora-banner {
     margin-top: 160px;
@@ -382,9 +359,7 @@ blockquote {
     }
 }
 
-// ============================================================
-// FOOTER
-// ============================================================
+// *** FOOTER ***//
 
 footer {
     text-align: right;
@@ -394,9 +369,7 @@ footer {
     font-weight: 300;
 }
 
-// ============================================================
-// RESPONSIVE BORGIR
-// ============================================================
+// *** RESPONSIVE BORGIR ***//
 
 @include mobile {
 

@@ -1,5 +1,3 @@
-// *** VARIABLES CSS CUSTOM ***//
-
 :root {
     // --- Colores dark mode ---
     --fondo-principal:    #0E1117;
@@ -27,14 +25,14 @@
     --fondo-secundario:   #334D78;
     --texto-tarjetas:     #F5F7FA;
 
-    // --- Colores botón (light mode = "botón 2") ---
+    // Colores botón (light mode = "botón 2")
     --btn-fondo:          #1A1A2E;
     --btn-letra:          #F5F7FA;
     --btn-fondo-hover:    #709AC4;
     --btn-letra-hover:    #F5F7FA;
 }
 
-// --- Tipografía (no depende del modo) ---
+// Tipografía
 :root {
     --font-titulo: 'Outfit', sans-serif;
     --font-texto:  'Nunito Sans', sans-serif;

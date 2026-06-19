@@ -1,25 +1,23 @@
-// *** MEDIA QUERY MOBILE ***//
+
 @mixin mobile {
     @media (max-width: 900px) {
         @content;
     }
 }
 
-// *** TEXTO TRUNCADO EN UNA LÍNEA ***//
 @mixin truncar {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-// *** CENTRAR CON FLEXBOX ***//
 @mixin flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-// *** FORMA DE BTN ***//
+// *** forma dell btn ***//
 @mixin btn-base {
     display: inline-flex;
     align-items: center;

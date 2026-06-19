@@ -1,5 +1,4 @@
-// *** VARIABLES BOOTSTRAP (sobrescriben ANTES del @import) ***//
-
+// *** nuevas variables para bootstrap ***//
 $primary:   #0084FF;
 $secondary: #709AC4;
 $body-bg:   #0E1117;
@@ -10,27 +9,19 @@ $font-family-sans-serif: 'Nunito Sans', sans-serif;
 $headings-font-family:   'Outfit', sans-serif;
 $headings-font-weight:   300;
 
-// Botones
+// btn
 $btn-border-radius: 0;
 $btn-padding-x:     2.5rem;
 $btn-padding-y:     0.75rem;
 $btn-font-size:     0.875rem;
 $btn-font-family:   'Outfit', sans-serif;
 
-// *** PARTIALS PREVIOS AL IMPORT ***//
-
 @import 'variables';
 @import 'mixins';
-
-// *** BOOTSTRAP ***//
-
 @import "../bootstrap-5.3.8/scss/bootstrap";
-
-// *** ESTILOS PROPIOS ***//
-
 @import 'generales';
 
-// *** SIDEBAR / HEADER NAV ***//
+// *********************** sidebar / nav **************************//
 
 .sidebar {
     position: fixed;
@@ -105,7 +96,7 @@ $btn-font-family:   'Outfit', sans-serif;
 
 .menu-toggle { display: none; }
 
-// *** MAIN ***//
+// ****************************************** HOME ****************************************** //
 
 main {
     margin-left: 220px;
@@ -154,7 +145,7 @@ main {
     display: block;
 }
 
-// *** BTN (sobreescribe Bootstrap) — cambia con el toggle dark/light ***//
+// *** BTN ***//
 
 .btn {
     @include btn-base;
@@ -169,7 +160,7 @@ main {
     }
 }
 
-// *** SECTIONS ***//
+// *** sections ***//
 
 .section { margin-top: 60px; }
 
@@ -181,7 +172,7 @@ main {
     text-transform: uppercase;
 }
 
-// *** PROYECTOS DESTACADOS ***//
+// *** tarjetas proyectos / proyectos destacados ***//
 
 .project-media {
     position: relative;
@@ -273,7 +264,7 @@ blockquote {
         font-family: var(--font-titulo);
         color: var(--tag);
         letter-spacing: 3%;
-        border-radius: 30px;
+        border-radius: 3px;
     }
 }
 

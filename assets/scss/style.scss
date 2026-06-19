@@ -67,20 +67,31 @@ $btn-font-family:   'Outfit', sans-serif;
     background: var(--acento);
 }
 
-.sidebar a {
+.sidebar nav a {
+    font-family: var(--font-titulo);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
     color: var(--texto-apagado);
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 400;
-    transition: color 0.2s;
+    transition: color 0.2s, font-weight 0.2s, letter-spacing 0.2s;
 
-    &:hover { color: var(--acento); }
+    &:hover {
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        color: var(--acento);
+    }
 }
 
-.logo {
-    font-size: 14px !important;
-    font-weight: 600 !important;
+.sidebar nav a.logo {
+    font-family: var(--font-titulo);
+    font-weight: 700;
+    letter-spacing: 0.03em;
     color: var(--texto-apagado);
+
+    &:hover {
+        color: var(--acento);
+    }
 }
 
 .social-icon {
@@ -96,7 +107,7 @@ $btn-font-family:   'Outfit', sans-serif;
 
 .menu-toggle { display: none; }
 
-// ****************************************** HOME ****************************************** //
+// *************************** HOME ***************************** //
 
 main {
     margin-left: 220px;
@@ -114,11 +125,13 @@ main {
 }
 
 .breadcrumb {
+    display: block;
     font-family: var(--font-texto);
     color: var(--texto-principal);
     font-size: 13px;
     text-transform: lowercase;
     letter-spacing: 3%;
+    margin-top: 0;
 }
 
 .hero h1 {
@@ -145,6 +158,16 @@ main {
     display: block;
 }
 
+.page-header {
+    padding-top: 0;
+}
+
+.page-header h1 {
+    margin-top: 0;
+    font-size: 64px;
+    letter-spacing: 3%;
+    line-height: 1.1;
+}
 // *** BTN ***//
 
 .btn {
@@ -162,7 +185,9 @@ main {
 
 // *** sections ***//
 
-.section { margin-top: 60px; }
+.section { 
+    margin-top: 60px; 
+}
 
 .section-title {
     font-size: 36px;
@@ -359,6 +384,9 @@ footer {
     font-size: 18px;
     font-weight: 300;
 }
+
+// ***************************** PROYECTOS.HTML *********************** //
+
 
 // *** RESPONSIVE BORGIR ***//
 

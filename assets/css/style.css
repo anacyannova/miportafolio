@@ -1,24 +1,35 @@
 @charset "UTF-8";
 :root {
   --fondo-principal: #0E1117;
-  --fondo-secundario: #1A1A2E;
   --texto-principal: #F5F7FA;
   --texto-apagado: #5270A3;
-  --acento: #0084FF;
-  --acento-apagado: #709AC4;
   --tag: #6B9FD4;
-  --font-titulo: "Outfit", sans-serif;
-  --font-texto: "Nunito Sans", sans-serif;
+  --acento: #0084FF;
+  --fondo-secundario: #334D78;
+  --texto-tarjetas: #F5F7FA;
+  --btn-fondo: #F5F7FA;
+  --btn-letra: #4A5568;
+  --btn-fondo-hover: #709AC4;
+  --btn-letra-hover: #F5F7FA;
 }
 
 :root.light {
   --fondo-principal: #F5F7FA;
-  --fondo-secundario: #F0F0F0;
-  --texto-principal: #0E1117;
-  --texto-apagado: #4A5568;
-  --acento: #4D9FEC;
-  --acento-apagado: #709AC4;
+  --texto-principal: #1A1A2E;
+  --texto-apagado: #5270A3;
   --tag: #6B9FD4;
+  --acento: #0084FF;
+  --fondo-secundario: #334D78;
+  --texto-tarjetas: #F5F7FA;
+  --btn-fondo: #1A1A2E;
+  --btn-letra: #F5F7FA;
+  --btn-fondo-hover: #709AC4;
+  --btn-letra-hover: #F5F7FA;
+}
+
+:root {
+  --font-titulo: "Outfit", sans-serif;
+  --font-texto: "Nunito Sans", sans-serif;
 }
 
 /*!
@@ -12038,30 +12049,23 @@ main {
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 25px;
-  background: var(--texto-principal);
-  color: var(--texto-apagado);
-  border: none;
+  font-family: var(--font-titulo);
+  font-size: 21px;
   font-weight: 400;
-  letter-spacing: 0.03em;
+  border: none;
+  cursor: pointer;
   transition: background 0.2s, color 0.2s;
-}
-.btn::after {
-  content: "→";
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.2s, transform 0.2s;
-  font-size: 16px;
+  margin-top: 25px;
+  padding: 12px 40px;
+  background: var(--btn-fondo);
+  color: var(--btn-letra);
 }
 .btn:hover {
-  background: var(--acento-apagado);
-  color: var(--texto-principal);
   font-weight: 600;
 }
-.btn:hover::after {
-  opacity: 1;
-  transform: translateX(0);
+.btn:hover {
+  background: var(--btn-fondo-hover);
+  color: var(--btn-letra-hover);
 }
 
 .section {
@@ -12201,13 +12205,13 @@ blockquote {
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 3%;
-  color: var(--texto-principal);
+  color: var(--texto-tarjetas);
   margin-bottom: 12px;
 }
 .service-overlay p {
   font-size: 18px;
   line-height: 150%;
-  color: var(--texto-principal);
+  color: var(--texto-tarjetas);
 }
 
 .bitacora-banner {
@@ -12233,11 +12237,11 @@ blockquote {
   font-size: 36px;
   font-weight: 300;
   letter-spacing: 3%;
-  color: var(--texto-principal);
+  color: var(--texto-tarjetas);
 }
 .bitacora-banner .bitacora-content p {
   line-height: 150%;
-  color: var(--texto-principal);
+  color: var(--texto-tarjetas);
   font-size: 18px;
 }
 

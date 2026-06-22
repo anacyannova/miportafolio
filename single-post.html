@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiel al diseño, guau | ACN Portafolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <header class="sidebar" id="sidebar">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
+        <nav>
+            <ul class="list-unstyled">
+                <li class="mb-4"><a class="logo" href="home.html">ANA CERÓN</a></li>
+                <li class="mb-4"><a href="proyectos.html">PROYECTOS</a></li>
+                <li class="mb-4"><a href="servicios.html">SERVICIOS</a></li>
+                <li class="mb-4"><a href="bitacora.html" class="active">BITÁCORA</a></li>
+            </ul>
+        </nav>
+        <div class="socials d-flex flex-column gap-4 mt-auto">
+            <a href="an.ceron@duocuc.cl" aria-label="Correo">
+                <img src="assets/img/logo-mail.png" alt="Logo email" class="social-icon">
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn">
+                <img src="assets/img/logo-linkedin.png" alt="Logo LinkedIn" class="social-icon">
+            </a>
+            <a href="#" target="_blank" aria-label="GitHub">
+                <img src="assets/img/logo-github.png" alt="Logo Github" class="social-icon">
+            </a>
+            <a href="#" target="_blank" aria-label="Behance">
+                <img src="assets/img/logo-behance.png" alt="Logo Behance" class="social-icon">
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- BREADCRUMB -->
+        <section class="page-header post-header">
+            <span class="breadcrumb">bitácora/post</span>
+        </section>
+
+        <!-- INTRO DEL POST (imagen + info) -->
+        <section class="post-intro">
+            <div class="post-intro-media">
+                <img src="assets/img/bitacora-preview.png" alt="Redesign Allendes Hermanos">
+            </div>
+            <div class="post-intro-info">
+                <h1>POST: ALLENDES HERMANOS</h1>
+                <div class="post-tags">
+                    <span>#Elearning</span>
+                    <span class="post-fecha">2026.01.28</span>
+                </div>
+                <hr>
+                <h2 class="post-intro-subtitle">INFO</h2>
+                <p>Primera vez codificando por encargo, interpretar y ejecutar en HTML + CSS con más variables tipográficas de las esperadas.</p>
+            </div>
+        </section>
+
+        <!-- CUERPO DEL POST -->
+        <article class="section post-cuerpo">
+
+            <h2 class="section-title">FIEL AL DISEÑO, GUAU</h2>
+            <p class="post-parrafo-ancho">Allendes Hermanos fue el primer proyecto donde mi trabajo era únicamente codificar, sin tomar decisiones de diseño, solo traducir fielmente lo que estaba en el Figma al navegador. Cuando el diseño es por encargo tienes que interpretar la intención detrás de cada elemento. El mayor desafío fue la estandarización tipográfica, el diseño tenía variaciones que no seguían un sistema claro por lo que tuve que unificar eso en código sin alterar o traicionar el resultado visual que se esperaba obtener.</p>
+
+            <div class="post-bloque post-bloque-1">
+                <div class="post-bloque-img">
+                    <img src="assets/img/allendes-hnos-blog.png" alt="Vista del blog de Allendes Hermanos">
+                </div>
+                <div class="post-bloque-texto">
+                    <p>Trabajar solo con HTML y CSS me obligó a resolver con lo que había, sin atajos. Fue primer semestre, pero eso no quitó el nivel de atención al detalle que presté para lograr un resultado fidedigno. La categorización del contenido la resolvimos en conjunto, porque había decisiones que cruzaban diseño y estructura al mismo tiempo, ese ida y vuelta fue el primer acercamiento al dialogo en el desarrollo de un proyecto. Diseño y desarrollo son una conversación, no etapas separadas blabla</p>
+                </div>
+            </div>
+
+            <div class="post-bloque post-bloque-2">
+                <div class="post-reflexion">
+                    <p>El resultado final funcionó y refleja bien la identidad que Josefa construyó. Lo que me llevé de esta experiencia no es solo haber codificado un encargo, sino entender que traducir un diseño a código siempre implica tomar decisiones ya sea grandes o pequeñas, y que hacerlo respetando la intención original también es una habilidad que me alegro de haber tenido la oportunidad de poner en práctica.</p>
+                </div>
+                <div class="post-bloque-img">
+                    <img src="assets/img/allendes-hnos-mockups.jpg" alt="Páginas index y gatos de Allendes Hermanos">
+                </div>
+            </div>
+
+            <div class="text-center post-botones">
+                <a href="#" class="btn">Ver repositorio</a>
+                <a href="#" class="btn">Visita el sitio</a>
+            </div>
+
+        </article>
+
+        <!-- MÁS REGISTROS -->
+        <section class="section">
+            <h2 class="section-title">MÁS REGISTROS</h2>
+            <div class="row g-2 bitacora-grid">
+
+                <article class="col-6 bitacora-card">
+                    <a href="#" class="bitacora-media">
+                        <img src="assets/img/fanstore-gaga-proyecto.png" alt="Lady Gaga Fanstore">
+                    </a>
+                    <h3><a href="single-post.html">LADY GAGA FANSTORE</a></h3>
+                    <p>E-commerce fan con tienda, noticias y fechas de conciertos. WordPress, WooCommerce, JavaScript, pasarela de pago.</p>
+                </article>
+
+                <article class="col-6 bitacora-card">
+                    <a href="#" class="bitacora-media">
+                        <img src="assets/img/nightzine-scr-01.jpg" alt="Nightzine revista">
+                    </a>
+                    <h3><a href="single-post.html">NIGHTZINE</a></h3>
+                    <p>Revista/blog con contenido dinámico sobre misterios, reviews y cultura oscura. WordPress, PHP, base de datos, hosting y cPanel.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <footer>
+            ©2026 | Ana Cerón Novoa
+        </footer>
+
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

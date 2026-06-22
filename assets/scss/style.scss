@@ -560,8 +560,6 @@ blockquote {
 
 // ***************************** SERVICIOS ************************* //
 
-
-// *** header de servicios ***//
 .servicios-header {
     h1 {
         font-size: 48px;
@@ -662,8 +660,8 @@ blockquote {
     }
 
     ul {
-        margin-top: 25px;
-        padding-left: 20px;
+        margin-top: 42px;
+        margin-left: 90px;
         list-style: disc;
 
         li {
@@ -694,24 +692,6 @@ blockquote {
 
     .project-media {
         aspect-ratio: 21 / 9;
-    }
-
-    .play-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        border: 2px solid var(--texto-tarjetas);
-        color: var(--texto-tarjetas);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0, 0, 0, 0.2);
-        pointer-events: none;
     }
 }
 

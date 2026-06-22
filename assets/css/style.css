@@ -12650,8 +12650,8 @@ blockquote {
   color: var(--texto-principal);
 }
 .servicios-accordion-panel-inner ul {
-  margin-top: 25px;
-  padding-left: 20px;
+  margin-top: 42px;
+  margin-left: 90px;
   list-style: disc;
 }
 .servicios-accordion-panel-inner ul li {
@@ -12678,23 +12678,6 @@ blockquote {
 }
 .giga-card .project-media {
   aspect-ratio: 21/9;
-}
-.giga-card .play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 2px solid var(--texto-tarjetas);
-  color: var(--texto-tarjetas);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.2);
-  pointer-events: none;
 }
 
 .bitacora-header h1, .bitacora-header .h1 {

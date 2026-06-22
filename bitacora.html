@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora | ACN Portafolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <header class="sidebar" id="sidebar">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"></button>
+        <nav>
+            <ul class="list-unstyled">
+                <li class="mb-4"><a class="logo" href="home.html">ANA CERÓN</a></li>
+                <li class="mb-4"><a href="proyectos.html">PROYECTOS</a></li>
+                <li class="mb-4"><a href="servicios.html">SERVICIOS</a></li>
+                <li class="mb-4"><a href="bitacora.html" class="active">BITÁCORA</a></li>
+            </ul>
+        </nav>
+        <div class="socials d-flex flex-column gap-4 mt-auto">
+            <a href="an.ceron@duocuc.cl" aria-label="Correo">
+                <img src="assets/img/logo-mail.png" alt="Logo email" class="social-icon">
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn">
+                <img src="assets/img/logo-linkedin.png" alt="Logo LinkedIn" class="social-icon">
+            </a>
+            <a href="#" target="_blank" aria-label="GitHub">
+                <img src="assets/img/logo-github.png" alt="Logo Github" class="social-icon">
+            </a>
+            <a href="#" target="_blank" aria-label="Behance">
+                <img src="assets/img/logo-behance.png" alt="Logo Behance" class="social-icon">
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HEADER BITÁCORA -->
+        <section class="page-header bitacora-header">
+            <h1>BITÁCORA</h1>
+            <p>Un registro sobre procesos, aprendizajes, decisiones y lo que se vuelve a intentar.</p>
+        </section>
+
+        <!-- EL REGISTRO -->
+        <section class="section">
+            <h2 class="section-title">EL REGISTRO</h2>
+
+            <!-- FILTRO DE TAGS -->
+            <div class="bitacora-filtros" id="bitacoraFiltros">
+                <span class="filtro-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="4" y1="6" x2="20" y2="6"></line>
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="18" x2="20" y2="18"></line>
+                        <circle cx="9" cy="6" r="2" fill="currentColor" stroke="none"></circle>
+                        <circle cx="15" cy="12" r="2" fill="currentColor" stroke="none"></circle>
+                        <circle cx="9" cy="18" r="2" fill="currentColor" stroke="none"></circle>
+                    </svg>
+                </span>
+                <button class="filtro-tag is-active" data-filtro="todos">Todos</button>
+                <button class="filtro-tag" data-filtro="wordpress">#WordPress</button>
+                <button class="filtro-tag" data-filtro="css">#CSS</button>
+                <button class="filtro-tag" data-filtro="accesibilidad">#Accesibilidad</button>
+                <button class="filtro-tag" data-filtro="diseño-ui">#Diseño UI</button>
+            </div>
+
+            <!-- GRID DE ENTRADAS -->
+            <div class="row g-2 bitacora-grid" id="bitacoraGrid">
+
+                <article class="col-6 bitacora-card" data-tags="css diseño-ui" data-pagina="1">
+                    <a href="#" class="bitacora-media">
+                        <img src="assets/img/allendes-hnos.png" alt="Redesign Allendes Hermanos">
+                    </a>
+                    <h3><a href="#">FIEL AL DISEÑO, GUAU</a></h3>
+                    <p>Primera vez codificando por encargo, interpretar y ejecutar en HTML + CSS con más variables tipográficas de las esperadas.</p>
+                </article>
+
+                <article class="col-6 bitacora-card" data-tags="accesibilidad diseño-ui" data-pagina="1">
+                    <a href="#" class="bitacora-media">
+                        <img src="assets/img/auditoria-nasa.png" alt="Auditoría de accesibilidad web NASA">
+                    </a>
+                    <h3><a href="#">NASA: AUDITORÍA</a></h3>
+                    <p>Análisis de cumplimiento WCAG del sitio de la NASA en español. Diseño inclusivo, tecnologías asistivas, presentado en Behance.</p>
+                </article>
+
+                <article class="col-6 bitacora-card" data-tags="wordpress" data-pagina="2">
+                    <a href="#" class="bitacora-media">
+                        <img src="assets/img/fanstore-gaga-proyecto.png" alt="Lady Gaga Fanstore">
+                    </a>
+                    <h3><a href="#">LADY GAGA FANSTORE</a></h3>
+                    <p>E-commerce fan con tienda, noticias y fechas de conciertos. WordPress, WooCommerce, JavaScript, pasarela de pago.</p>
+                </article>
+
+                <article class="col-6 bitacora-card" data-tags="wordpress" data-pagina="2">
+                    <a href="#" class="bitacora-media">
+                        <img src="assets/img/nightzine-scr-01.jpg" alt="Nightzine revista">
+                    </a>
+                    <h3><a href="#">NIGHTZINE</a></h3>
+                    <p>Revista/blog con contenido dinámico sobre misterios, reviews y cultura oscura. WordPress, PHP, base de datos, hosting y cPanel.</p>
+                </article>
+
+                <article class="col-6 bitacora-card" data-tags="wordpress" data-pagina="3">
+                    <a href="#" class="bitacora-media">
+                        <img src="assets/img/capacitaciones-proyecto.png" alt="Capacitaciones MASS">
+                    </a>
+                    <h3><a href="#">CAPACITACIONES MASS</a></h3>
+                    <p>Plataforma eLearning a medida para gestión de trabajadores y capacitaciones en prevención de riesgos, desarrollada con WordP...</p>
+                </article>
+
+                <article class="col-6 bitacora-card" data-tags="css" data-pagina="3">
+                    <a href="#" class="bitacora-media">
+                        <div class="bitacora-media-placeholder"></div>
+                    </a>
+                    <h3><a href="#">LOREM IPSUM DOLOR</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum pharetra, porttitor augue nec dictum neque.</p>
+                </article>
+
+                <article class="col-6 bitacora-card" data-tags="diseño-ui" data-pagina="4">
+                    <a href="#" class="bitacora-media">
+                        <div class="bitacora-media-placeholder"></div>
+                    </a>
+                    <h3><a href="#">LOREM IPSUM SED</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                </article>
+
+                <article class="col-6 bitacora-card" data-tags="wordpress css" data-pagina="4">
+                    <a href="#" class="bitacora-media">
+                        <div class="bitacora-media-placeholder"></div>
+                    </a>
+                    <h3><a href="#">LOREM IPSUM NEQUE</a></h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </article>
+
+            </div>
+
+            <!-- PAGINACIÓN -->
+            <div class="bitacora-paginacion" id="bitacoraPaginacion">
+                <button class="pag-flecha" id="pagPrev" aria-label="Página anterior">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="20" y1="12" x2="4" y2="12"></line>
+                        <polyline points="10 6 4 12 10 18"></polyline>
+                    </svg>
+                </button>
+                <div class="pag-dots" id="pagDots"></div>
+                <button class="pag-flecha" id="pagNext" aria-label="Página siguiente">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <polyline points="14 6 20 12 14 18"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+        </section>
+
+        <footer>
+            ©2026 | Ana Cerón Novoa
+        </footer>
+
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -12258,7 +12258,7 @@ blockquote {
 .skills span {
   border: 1px solid var(--tag);
   padding: 6px 14px;
-  font-size: 11px;
+  font-size: 12px;
   font-family: var(--font-titulo);
   color: var(--tag);
   letter-spacing: 3%;
@@ -12463,22 +12463,38 @@ blockquote {
   margin-top: var(--section-gap-large);
   padding: 60px 80px;
   background: var(--fondo-secundario);
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 .proyecto-resumen .proyecto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 9px;
+  width: 300px;
+  margin-left: auto;
   margin-bottom: 50px;
 }
 .proyecto-resumen .proyecto-tags span {
-  color: var(--texto-tarjetas);
+  border: 1px solid var(--tag);
+  padding: 6px 14px;
+  font-size: 12px;
+  font-family: var(--font-titulo);
+  color: var(--tag);
+  letter-spacing: 3%;
+  border-radius: 3px;
 }
 .proyecto-resumen .section-title {
   color: var(--texto-tarjetas);
   margin-bottom: 30px;
+  grid-column: 1;
 }
 .proyecto-resumen p {
   max-width: 620px;
   line-height: 1.7;
   font-size: 18px;
   color: var(--texto-tarjetas);
+  grid-column: 1;
 }
 
 .paleta-grid {
@@ -12514,11 +12530,24 @@ blockquote {
 }
 .proyecto-detalles .detalles-tags {
   grid-column: 1;
-  grid-row: 1;
+}
+.proyecto-detalles .detalles-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.proyecto-detalles .detalles-skills span {
+  border: 1px solid var(--tag);
+  padding: 6px 14px;
+  font-size: 12px;
+  font-family: var(--font-titulo);
+  color: var(--tag);
+  border-radius: 3px;
 }
 .proyecto-detalles .detalles-texto {
   grid-column: 2;
-  grid-row: 1;
+  max-width: 620px;
+  justify-self: end;
 }
 .proyecto-detalles .detalles-texto p {
   max-width: 620px;
@@ -12526,10 +12555,10 @@ blockquote {
   font-size: 18px;
 }
 .proyecto-detalles .detalles-botones {
-  grid-column: 1/span 2;
-  grid-row: 2;
+  grid-column: span 2;
   display: flex;
   gap: 20px;
+  justify-content: center;
 }
 
 .servicios-header h1, .servicios-header .h1 {
@@ -13070,5 +13099,24 @@ footer {
   }
   .bitacora-banner .bitacora-text h2, .bitacora-banner .bitacora-text .h2 {
     margin-top: 39px;
+  }
+}
+@media (max-width: 768px) {
+  .proyecto-detalles {
+    grid-template-columns: 1fr;
+  }
+  .detalles-tags {
+    grid-column: 1;
+  }
+  .detalles-texto {
+    grid-column: 1;
+    justify-self: stretch;
+    max-width: 100%;
+  }
+  .detalles-texto p {
+    max-width: 100%;
+  }
+  .detalles-botones {
+    grid-column: 1;
   }
 }/*# sourceMappingURL=style.css.map */

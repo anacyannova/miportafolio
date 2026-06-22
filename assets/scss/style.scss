@@ -228,7 +228,7 @@ blockquote {
     span {
         border: 1px solid var(--tag);
         padding: 6px 14px;
-        font-size: 11px;
+        font-size: 12px;
         font-family: var(--font-titulo);
         color: var(--tag);
         letter-spacing: 3%;
@@ -449,18 +449,33 @@ blockquote {
     margin-top: var(--section-gap-large);
     padding: 60px 80px;
     background: var(--fondo-secundario);
+    display: grid;
+    grid-template-columns: 1fr auto;
 
     .proyecto-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 9px;
+        width: 300px;
+        margin-left: auto;
         margin-bottom: 50px;
 
         span {
-            color: var(--texto-tarjetas);
+            border: 1px solid var(--tag);
+            padding: 6px 14px;
+            font-size: 12px;
+            font-family: var(--font-titulo);
+            color: var(--tag);
+            letter-spacing: 3%;
+            border-radius: 3px;
         }
     }
 
     .section-title {
         color: var(--texto-tarjetas);
         margin-bottom: 30px;
+        grid-column: 1;
     }
 
     p {
@@ -468,6 +483,7 @@ blockquote {
         line-height: 1.7;
         font-size: 18px;
         color: var(--texto-tarjetas);
+        grid-column: 1;
     }
 }
 
@@ -505,12 +521,27 @@ blockquote {
 
     .detalles-tags {
         grid-column: 1;
-        grid-row: 1;
+    }
+
+    .detalles-skills{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+
+        span {
+        border: 1px solid var(--tag);
+        padding: 6px 14px;
+        font-size: 12px;
+        font-family: var(--font-titulo);
+        color: var(--tag);
+        border-radius: 3px;
+        }
     }
 
     .detalles-texto {
         grid-column: 2;
-        grid-row: 1;
+        max-width: 620px;
+        justify-self: end;
 
         p {
             max-width: 620px;
@@ -520,10 +551,10 @@ blockquote {
     }
 
     .detalles-botones {
-        grid-column: 1 / span 2;
-        grid-row: 2;
+        grid-column: span 2;
         display: flex;
         gap: 20px;
+        justify-content: center;
     }
 }
 
@@ -1121,4 +1152,31 @@ footer {
             }
         }
     }
+}
+
+
+@media (max-width: 768px) {
+
+    .proyecto-detalles {
+        grid-template-columns: 1fr;
+    }
+
+    .detalles-tags {
+        grid-column: 1;
+    }
+
+    .detalles-texto {
+        grid-column: 1;
+        justify-self: stretch; // o initial
+        max-width: 100%;
+
+        p {
+            max-width: 100%;
+        }
+    }
+
+    .detalles-botones {
+        grid-column: 1;
+    }
+
 }

@@ -1,5 +1,5 @@
 :root {
-    // --- Colores dark mode ---
+    // colores dark mode
     --fondo-principal:    #0E1117;
     --texto-principal:    #F5F7FA;
     --texto-apagado:      #5270A3;
@@ -8,7 +8,7 @@
     --fondo-secundario:   #334D78;
     --texto-tarjetas:     #F5F7FA;
 
-    // --- Colores botón (dark mode = "botón 1") ---
+    // colores btn dark mode (botón 1)
     --btn-fondo:          #F5F7FA;
     --btn-letra:          #4A5568;
     --btn-fondo-hover:    #709AC4;
@@ -16,7 +16,7 @@
 }
 
 :root.light {
-    // --- Colores light mode ---
+    // colores light mode
     --fondo-principal:    #F5F7FA;
     --texto-principal:    #1A1A2E;
     --texto-apagado:      #5270A3;
@@ -25,19 +25,29 @@
     --fondo-secundario:   #334D78;
     --texto-tarjetas:     #F5F7FA;
 
-    // Colores botón (light mode = "botón 2")
+    // colores btn light mode (botón 2)
     --btn-fondo:          #1A1A2E;
     --btn-letra:          #F5F7FA;
     --btn-fondo-hover:    #709AC4;
     --btn-letra-hover:    #F5F7FA;
 }
 
-// Tipografía
-:root {
-    --font-titulo: 'Outfit', sans-serif;
-    --font-texto:  'Nunito Sans', sans-serif;
-}
 
 :root {
+    // tipografía
+    --font-titulo: 'Outfit', sans-serif;
+    --font-texto:  'Nunito Sans', sans-serif;
+
+    // layout
+    --sidebar-width: 220px;
+    --content-padding-right: 80px;
+
+    // espaciados
     --page-start: 90px;
+    --section-gap: 60px;
+    --section-gap-large: 160px;
+    --footer-gap: 120px;
+
+    // grids
+    --grid-gap: 100px;
 }

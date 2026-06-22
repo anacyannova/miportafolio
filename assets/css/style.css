@@ -30,10 +30,13 @@
 :root {
   --font-titulo: 'Outfit', sans-serif;
   --font-texto: 'Nunito Sans', sans-serif;
-}
-
-:root {
+  --sidebar-width: 220px;
+  --content-padding-right: 80px;
   --page-start: 90px;
+  --section-gap: 60px;
+  --section-gap-large: 160px;
+  --footer-gap: 120px;
+  --grid-gap: 100px;
 }
 
 /*!
@@ -12050,6 +12053,58 @@ a:hover {
   color: var(--acento);
 }
 
+h1, .h1 {
+  font-size: 64px;
+  letter-spacing: 3%;
+  line-height: 1.1;
+}
+
+main {
+  margin-left: var(--sidebar-width);
+  padding-right: var(--content-padding-right);
+}
+
+.page-header {
+  padding-top: var(--page-start);
+  margin-bottom: var(--section-gap);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-titulo);
+  font-size: 21px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover {
+  font-weight: 600;
+}
+.btn {
+  margin-top: 25px;
+  padding: 12px 40px;
+  background: var(--btn-fondo);
+  color: var(--btn-letra);
+}
+.btn:hover {
+  background: var(--btn-fondo-hover);
+  color: var(--btn-letra-hover);
+}
+
+.section {
+  margin-top: var(--section-gap);
+}
+
+.section-title {
+  font-size: 36px;
+  letter-spacing: 3%;
+  margin-bottom: 50px;
+  color: var(--texto-principal);
+  text-transform: uppercase;
+}
+
 .sidebar {
   position: fixed;
   left: 0;
@@ -12133,15 +12188,10 @@ a:hover {
   display: none;
 }
 
-main {
-  margin-left: 220px;
-  padding: 0 80px 0 0;
-}
-
 .hero {
   display: grid;
   grid-template-columns: 1fr 600px;
-  gap: 100px;
+  gap: var(--grid-gap);
   align-items: center;
 }
 
@@ -12149,7 +12199,7 @@ main {
   display: block;
   font-family: var(--font-texto);
   color: var(--texto-principal);
-  font-size: 13px;
+  font-size: 15px;
   text-transform: lowercase;
   letter-spacing: 3%;
   margin-top: 0;
@@ -12175,110 +12225,11 @@ main {
   display: block;
 }
 
-.page-header {
-  padding-top: var(--page-start);
-}
-
-.page-header h1, .page-header .h1 {
-  font-size: 64px;
-  letter-spacing: 3%;
-  line-height: 1.1;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-titulo);
-  font-size: 21px;
-  font-weight: 400;
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-.btn:hover {
-  font-weight: 600;
-}
-.btn {
-  margin-top: 25px;
-  padding: 12px 40px;
-  background: var(--btn-fondo);
-  color: var(--btn-letra);
-}
-.btn:hover {
-  background: var(--btn-fondo-hover);
-  color: var(--btn-letra-hover);
-}
-
-.section {
-  margin-top: 60px;
-}
-
-.section-title {
-  font-size: 36px;
-  letter-spacing: 3%;
-  margin-bottom: 50px;
-  color: var(--texto-principal);
-  text-transform: uppercase;
-}
-
-.project-media {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  background: var(--fondo-secundario);
-}
-
-.project-thumbnail {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
-}
-
-.project-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: auto;
-  z-index: 1;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-}
-
-.project-card h3, .project-card .h3 {
-  margin-top: 20px;
-  font-weight: 300;
-  font-size: 21px;
-  letter-spacing: 3%;
-}
-.project-card h3 a, .project-card .h3 a {
-  color: var(--texto-principal);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.project-card h3 a:hover, .project-card .h3 a:hover {
-  color: var(--acento);
-}
-
-.project-category {
-  display: block;
-  margin-top: 6px;
-  margin-bottom: 40px;
-  font-size: 18px;
-  color: var(--texto-principal);
-  letter-spacing: 3%;
-}
-
 .bio-skills {
-  margin-top: 160px;
+  margin-top: var(--section-gap-large);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  gap: var(--grid-gap);
 }
 
 .bio-symbol {
@@ -12358,43 +12309,110 @@ blockquote {
 }
 
 .bitacora-banner {
-  margin-top: 160px;
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  margin-right: -80px;
+  position: relative;
+  margin-top: var(--section-gap-large);
+  height: 520px;
+  overflow: visible;
 }
 .bitacora-banner .bitacora-image {
-  overflow: hidden;
+  position: absolute;
+  left: 120px;
+  top: -20px;
+  width: 420px;
+  z-index: 2;
 }
 .bitacora-banner .bitacora-image img {
+  width: 100%;
+  display: block;
+}
+.bitacora-banner .bitacora-content {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 100%;
+  height: 450px;
+  background: var(--fondo-secundario);
+  display: flex;
+  align-items: center;
+}
+.bitacora-banner .bitacora-content .bitacora-text {
+  width: 450px;
+  margin-left: 600px;
+}
+.bitacora-banner .bitacora-content .bitacora-text h2, .bitacora-banner .bitacora-content .bitacora-text .h2 {
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 3%;
+  color: var(--texto-tarjetas);
+  margin-bottom: 30px;
+}
+.bitacora-banner .bitacora-content .bitacora-text p {
+  line-height: 1.6;
+  color: var(--texto-tarjetas);
+  font-size: 18px;
+  width: 100%;
+}
+
+.project-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--fondo-secundario);
+}
+
+.project-thumbnail {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-.bitacora-banner .bitacora-content {
-  background: var(--fondo-secundario);
-  padding: 60px;
+
+.project-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: auto;
+  z-index: 1;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
-.bitacora-banner .bitacora-content h2, .bitacora-banner .bitacora-content .h2 {
-  font-size: 36px;
+
+.project-card h3, .project-card .h3 {
+  margin-top: 20px;
   font-weight: 300;
+  font-size: 21px;
   letter-spacing: 3%;
-  color: var(--texto-tarjetas);
 }
-.bitacora-banner .bitacora-content p {
-  line-height: 150%;
-  color: var(--texto-tarjetas);
+.project-card h3 a, .project-card .h3 a {
+  color: var(--texto-principal);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.project-card h3 a:hover, .project-card .h3 a:hover {
+  color: var(--acento);
+}
+
+.project-category {
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 40px;
   font-size: 18px;
+  color: var(--texto-principal);
+  letter-spacing: 3%;
 }
 
 footer {
   text-align: right;
-  margin-top: 120px;
+  margin-top: var(--footer-gap);
   padding-bottom: 40px;
   font-size: 18px;
   font-weight: 300;
+  letter-spacing: 3%;
 }
 
 @media (max-width: 900px) {
@@ -12407,7 +12425,7 @@ footer {
     top: 20px;
     left: 20px;
     z-index: 200;
-    background: transparent;
+    background: var(--tag);
     border: none;
     cursor: pointer;
     padding: 8px;
@@ -12429,6 +12447,7 @@ footer {
     transform: translateY(-7px) rotate(-45deg);
   }
   .sidebar {
+    padding-top: 90px;
     transform: translateX(-100%);
     transition: transform 0.3s;
   }
@@ -12437,11 +12456,11 @@ footer {
   }
   main {
     margin-left: 0;
-    padding: 80px 24px 40px;
+    padding: 30px 24px 40px;
   }
   .hero {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 15px;
     min-height: auto;
   }
   .hero h1, .hero .h1 {
@@ -12451,7 +12470,10 @@ footer {
     font-size: 28px;
   }
   .hero-image {
-    order: -1;
+    order: 2;
+    width: 90%;
+    max-width: 390px;
+    margin: 30px auto 0;
   }
   .projects-grid {
     margin-left: -24px;
@@ -12470,10 +12492,46 @@ footer {
     margin-top: 80px;
   }
   .services-grid .service-card {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 9px;
   }
   .bitacora-banner {
-    grid-template-columns: 1fr;
-    margin-right: -24px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .bitacora-banner .bitacora-image {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 70%;
+    max-width: 280px;
+    margin: 0 auto;
+    margin-bottom: -210px;
+    z-index: 2;
+  }
+  .bitacora-banner img {
+    width: 100%;
+  }
+  .bitacora-banner .bitacora-content {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 90px 24px 40px;
+    align-items: center;
+    padding-top: 70px;
+    margin-top: -80px;
+  }
+  .bitacora-banner .bitacora-text {
+    margin-left: 0 !important;
+    padding-left: 39px;
+    width: 100%;
+    text-align: center;
+    margin-top: 240px;
+  }
+  .bitacora-banner .bitacora-text h2, .bitacora-banner .bitacora-text .h2 {
+    margin-top: 39px;
   }
 }/*# sourceMappingURL=style.css.map */

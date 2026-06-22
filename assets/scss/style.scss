@@ -1,10 +1,10 @@
-// *** nuevas variables para bootstrap ***//
+// *** configuracion para bootstrap ***//
 $primary:   #0084FF;
 $secondary: #709AC4;
 $body-bg:   #0E1117;
 $body-color: #F5F7FA;
 
-// Tipografía
+// tipografía
 $font-family-sans-serif: 'Nunito Sans', sans-serif;
 $headings-font-family:   'Outfit', sans-serif;
 $headings-font-weight:   300;
@@ -21,8 +21,51 @@ $btn-font-family:   'Outfit', sans-serif;
 @import "../bootstrap-5.3.8/scss/bootstrap";
 @import 'generales';
 
-// *********************** sidebar / nav **************************//
+// **************** CSS PARA TODO EL SITIO  *******************//
+h1 {
+    font-size: 64px;
+    letter-spacing: 3%;
+    line-height: 1.1;
+}
 
+main {
+    margin-left: var(--sidebar-width);
+    padding-right: var(--content-padding-right);
+}
+// *** componentes globales *** //
+
+.page-header {
+    padding-top: var(--page-start);
+    margin-bottom: var(--section-gap);
+}
+
+.btn {
+    @include btn-base;
+    margin-top: 25px;
+    padding: 12px 40px;
+    background: var(--btn-fondo);
+    color: var(--btn-letra);
+
+    &:hover {
+        background: var(--btn-fondo-hover);
+        color: var(--btn-letra-hover);
+    }
+}
+
+.section { 
+    margin-top: var(--section-gap);
+}
+
+.section-title {
+    font-size: 36px;
+    letter-spacing: 3%;
+    margin-bottom: 50px;
+    color: var(--texto-principal);
+    text-transform: uppercase;
+}
+
+
+// *** sidebar / navegacion ***//
 .sidebar {
     position: fixed;
     left: 0;
@@ -105,21 +148,18 @@ $btn-font-family:   'Outfit', sans-serif;
     filter: invert(55%) sepia(60%) saturate(500%) hue-rotate(185deg) brightness(105%);
 }
 
-.menu-toggle { display: none; }
-
-// *************************** HOME ***************************** //
-
-main {
-    margin-left: 220px;
-    padding: 0 80px 0 0;
+.menu-toggle { 
+    display: none; 
 }
 
-// *** HERO ***//
+
+
+// *************************** HOME ***************************** //
 
 .hero {
     display: grid;
     grid-template-columns: 1fr 600px;
-    gap: 100px;
+    gap: var(--grid-gap);
     align-items: center;
 }
 
@@ -127,7 +167,7 @@ main {
     display: block;
     font-family: var(--font-texto);
     color: var(--texto-principal);
-    font-size: 13px;
+    font-size: 15px;
     text-transform: lowercase;
     letter-spacing: 3%;
     margin-top: 0;
@@ -153,105 +193,13 @@ main {
     display: block;
 }
 
-.page-header {
-    padding-top: var(--page-start);
-}
-
-.page-header h1 {
-    font-size: 64px;
-    letter-spacing: 3%;
-    line-height: 1.1;
-}
-
-// *** BTN ***//
-
-.btn {
-    @include btn-base;
-    margin-top: 25px;
-    padding: 12px 40px;
-    background: var(--btn-fondo);
-    color: var(--btn-letra);
-
-    &:hover {
-        background: var(--btn-fondo-hover);
-        color: var(--btn-letra-hover);
-    }
-}
-
-// *** sections ***//
-
-.section { 
-    margin-top: 60px; 
-}
-
-.section-title {
-    font-size: 36px;
-    letter-spacing: 3%;
-    margin-bottom: 50px;
-    color: var(--texto-principal);
-    text-transform: uppercase;
-}
-
-// *** tarjetas proyectos / proyectos destacados ***//
-
-.project-media {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: var(--fondo-secundario);
-}
-
-.project-thumbnail {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.project-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: auto;
-    z-index: 1;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-}
-
-.project-card h3 {
-    margin-top: 20px;
-    font-weight: 300;
-    font-size: 21px;
-    letter-spacing: 3%;
-
-    a {
-        color: var(--texto-principal);
-        text-decoration: none;
-        transition: color 0.2s;
-        &:hover { color: var(--acento); }
-    }
-}
-
-.project-category {
-    display: block;
-    margin-top: 6px;
-    margin-bottom: 40px;
-    font-size: 18px;
-    color: var(--texto-principal);
-    letter-spacing: 3%;
-}
-
 // *** BIO & SKILLS ***//
 
 .bio-skills {
-    margin-top: 160px;
+    margin-top: var(--section-gap-large);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 100px;
+    gap: var(--grid-gap);
 }
 
 .bio-symbol {
@@ -332,58 +280,128 @@ blockquote {
     }
 }
 
-// *** BITÁCORA BANNER ***//
+// *** bitacora banner ***//
 
 .bitacora-banner {
-    margin-top: 160px;
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    margin-right: -80px;
+    position: relative;
+    margin-top: var(--section-gap-large);
+    height: 520px;
+    overflow: visible;
 
-    .bitacora-image {
-        overflow: hidden;
+    .bitacora-image{
+        position: absolute;
+        left: 120px;
+        top: -20px;
+        width: 420px;
+        z-index: 2;
 
         img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
             display: block;
         }
     }
 
     .bitacora-content {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        width: 100%;
+        height: 450px;
         background: var(--fondo-secundario);
-        padding: 60px;
+        display: flex;
+        align-items: center;
 
-        h2 {
-            font-size: 36px;
-            font-weight: 300;
-            letter-spacing: 3%;
-            color: var(--texto-tarjetas);
-        }
+        .bitacora-text {
+            width: 450px;
+            margin-left: 600px;
 
-        p {
-            line-height: 150%;
-            color: var(--texto-tarjetas);
-            font-size: 18px;
+            h2 {
+                font-size: 36px;
+                font-weight: 300;
+                letter-spacing: 3%;
+                color: var(--texto-tarjetas);
+                margin-bottom: 30px;
+            }
+            p {
+                line-height: 1.6;
+                color: var(--texto-tarjetas);
+                font-size: 18px;
+                width: 100%;
+            }
         }
     }
 }
 
-// *** FOOTER ***//
+// ***************************** PROYECTOS ************************* //
+
+// *** tarjetas proyectos / proyectos destacados ***//
+.project-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--fondo-secundario);
+}
+
+.project-thumbnail {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: auto;
+    z-index: 1;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.project-card h3 {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 21px;
+    letter-spacing: 3%;
+
+    a {
+        color: var(--texto-principal);
+        text-decoration: none;
+        transition: color 0.2s;
+        &:hover { color: var(--acento); }
+    }
+}
+
+.project-category {
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: var(--texto-principal);
+    letter-spacing: 3%;
+}
+
+
+// ************************** FOOTER *******************************//
 
 footer {
     text-align: right;
-    margin-top: 120px;
+    margin-top: var(--footer-gap);
     padding-bottom: 40px;
     font-size: 18px;
     font-weight: 300;
+    letter-spacing: 3%;
 }
 
-// ***************************** PROYECTOS.HTML *********************** //
 
 
-// *** RESPONSIVE BORGIR ***//
+
+// ************************ RESPONSIVE **************************// 
 
 @include mobile {
 
@@ -396,7 +414,7 @@ footer {
         top: 20px;
         left: 20px;
         z-index: 200;
-        background: transparent;
+        background: var(--tag);
         border: none;
         cursor: pointer;
         padding: 8px;
@@ -415,6 +433,7 @@ footer {
     }
 
     .sidebar {
+        padding-top: 90px;
         transform: translateX(-100%);
         transition: transform 0.3s;
         &.open { transform: translateX(0); }
@@ -422,19 +441,24 @@ footer {
 
     main {
         margin-left: 0;
-        padding: 80px 24px 40px;
+        padding: 30px 24px 40px;
     }
 
     .hero {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 15px;
         min-height: auto;
 
         h1 { font-size: 40px; }
         h2 { font-size: 28px; }
     }
 
-    .hero-image { order: -1; }
+    .hero-image { 
+        order: 2;
+        width: 90%;
+        max-width: 390px;
+        margin: 30px auto 0;
+    }
 
     .projects-grid {
         margin-left: -24px;
@@ -451,10 +475,51 @@ footer {
         margin-top: 80px;
     }
 
-    .services-grid .service-card { width: 100%; }
+    .services-grid .service-card { 
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 9px;
+    }
 
     .bitacora-banner {
-        grid-template-columns: 1fr;
-        margin-right: -24px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        .bitacora-image {
+            position: relative;
+            left: auto;
+            top: auto;
+            width: 70%;
+            max-width: 280px;
+            margin: 0 auto;
+            margin-bottom: -210px;
+            z-index: 2;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .bitacora-content {
+            position: static;
+            width: 100%;
+            height: auto;
+            padding: 90px 24px 40px;
+            align-items: center;
+            padding-top: 70px;
+            margin-top: -80px;
+        }
+        .bitacora-text{
+            margin-left: 0 !important;
+            padding-left: 39px;
+            width: 100%;
+            text-align: center;
+            margin-top: 240px;
+            h2{
+                margin-top: 39px;
+            }
+        }
     }
 }

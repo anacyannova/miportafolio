@@ -910,8 +910,7 @@ blockquote {
 
     hr {
         margin: 30px 0;
-        border: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: 3px solid var(--texto-tarjetas);
     }
 }
 
@@ -922,11 +921,11 @@ blockquote {
     gap: 12px;
 
     span {
-        border: 1px solid var(--tag);
+        border: 1px solid var(--texto-tarjetas);
         padding: 6px 14px;
         font-size: 11px;
         font-family: var(--font-titulo);
-        color: var(--tag);
+        color: var(--texto-tarjetas);
         letter-spacing: 3%;
         border-radius: 3px;
     }
@@ -983,7 +982,7 @@ blockquote {
 }
 
 .post-reflexion {
-    text-align: center;
+    text-align: end;
     padding: 0 40px;
 
     p {

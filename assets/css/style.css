@@ -12840,6 +12840,11 @@ blockquote {
   row-gap: 60px;
 }
 
+.bitacora-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.15s ease-out;
+}
 .bitacora-card.is-hidden {
   display: none;
 }
@@ -12866,7 +12871,7 @@ blockquote {
 }
 
 .bitacora-card:hover .bitacora-media img {
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 
 .bitacora-card h3, .bitacora-card .h3 {

@@ -12715,24 +12715,77 @@ blockquote {
   color: var(--texto-principal);
 }
 
-.pasos-grid {
-  min-height: 300px;
+.pasos-track {
+  display: flex;
+  gap: 18px;
+  min-height: 360px;
 }
 
 .paso-card {
-  aspect-ratio: 4/5;
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
   background: var(--fondo-secundario);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 24px;
+  transition: flex 0.4s ease-in-out;
 }
-
-.giga-grid {
+.paso-card.active {
+  flex: 2.4;
+  align-items: flex-start;
+  justify-content: center;
+}
+.paso-card.active .paso-card-number {
+  display: none;
+}
+.paso-card.active .paso-card-content {
+  text-align: left;
+}
+.paso-card.active .paso-card-title,
+.paso-card.active .paso-card-desc {
   display: block;
 }
 
-.giga-card {
+.paso-card-content {
   width: 100%;
+  text-align: center;
 }
-.giga-card .project-media {
-  aspect-ratio: 21/9;
+
+.paso-card-number {
+  font-family: var(--font-titulo);
+  font-weight: 300;
+  font-size: 54px;
+  line-height: 1;
+  color: var(--texto-tarjetas);
+}
+
+.paso-card-title,
+.paso-card-desc {
+  display: none;
+}
+
+.paso-card-title {
+  font-family: var(--font-titulo);
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--texto-tarjetas);
+  margin: 0 0 36px;
+  letter-spacing: 3%;
+  text-align: center;
+}
+
+.paso-card-desc {
+  font-family: var(--font-texto);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--texto-tarjetas);
+  margin: 0;
+  text-align: center;
 }
 
 .bitacora-header h1, .bitacora-header .h1 {
@@ -13191,5 +13244,44 @@ footer {
   .proyecto-detalles .detalles-botones {
     grid-column: 1;
     grid-row: 3;
+  }
+  .pasos-track {
+    flex-direction: column;
+    min-height: auto;
+    gap: 9px;
+  }
+  .pasos-track .paso-card {
+    flex: none !important;
+    width: 100%;
+    min-height: 120px;
+    padding: 36px 24px;
+    overflow: hidden;
+    transition: min-height 0.45s ease;
+  }
+  .pasos-track .paso-card .paso-card-content {
+    text-align: center;
+  }
+  .pasos-track .paso-card .paso-card-number {
+    display: block;
+  }
+  .pasos-track .paso-card .paso-card-title,
+  .pasos-track .paso-card .paso-card-desc {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.45s ease;
+  }
+  .pasos-track .paso-card.active {
+    min-height: 220px;
+  }
+  .pasos-track .paso-card.active .paso-card-number {
+    display: none;
+  }
+  .pasos-track .paso-card.active .paso-card-title,
+  .pasos-track .paso-card.active .paso-card-desc {
+    opacity: 1;
+    max-height: 300px;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

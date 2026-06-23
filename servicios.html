@@ -21,7 +21,7 @@
             <ul class="list-unstyled">
                 <li class="mb-4"><a class="logo" href="home.html">ANA CERÓN</a></li>
                 <li class="mb-4"><a href="proyectos.html">PROYECTOS</a></li>
-                <li class="mb-4"><a href="servicios.html" class="active">SERVICIOS</a></li>
+                <li class="mb-4"><a href="servicios.html">SERVICIOS</a></li>
                 <li class="mb-4"><a href="bitacora.html">BITÁCORA</a></li>
             </ul>
         </nav>
@@ -42,8 +42,6 @@
     </header>
 
     <main>
-
-        <!-- HEADER SERVICIOS -->
         <section class="page-header servicios-header">
             <h1>SERVICIOS</h1>
             <h2>¿TIENES UNA IDEA? LA REALIZO POR TI</h2>
@@ -116,23 +114,35 @@
         <!-- BENEFICIOS / PASO A PASO -->
         <section class="section">
             <h2 class="section-title">BENEFICIOS / PASO A PASO</h2>
-            <div class="row g-2 pasos-grid">
+            <div class="pasos-track" id="pasosTrack">
 
-                <article class="col-4 paso-card">
-                    <!-- contenido del paso 01, próximamente -->
+                <article class="paso-card active" data-index="0">
+                    <div class="paso-card-content">
+                        <span class="paso-card-number">01</span>
+                        <h3 class="paso-card-title">01 DESCUBRIMIENTO</h3>
+                        <p class="paso-card-desc">Entiendo tu idea, objetivos y el problema real que necesitas resolver antes de levantar una sola pantalla.</p>
+                    </div>
                 </article>
 
-                <article class="col-4 paso-card">
-                    <!-- contenido del paso 02, próximamente -->
+                <article class="paso-card" data-index="1">
+                    <div class="paso-card-content">
+                        <span class="paso-card-number">02</span>
+                        <h3 class="paso-card-title">02 PRODUCCIÓN</h3>
+                        <p class="paso-card-desc">Aquí es donde el proyecto toma forma. Desarrollo tu sitio, probando cada funcionalidad hasta que todo opere exactamente como fue pensado.</p>
+                    </div>
                 </article>
 
-                <article class="col-4 paso-card">
-                    <!-- contenido del paso 03, próximamente -->
+                <article class="paso-card" data-index="2">
+                    <div class="paso-card-content">
+                        <span class="paso-card-number">03</span>
+                        <h3 class="paso-card-title">03 ENTREGA</h3>
+                        <p class="paso-card-desc">Reviso contigo cada detalle final y dejo el sitio publicado, funcionando y listo para crecer.</p>
+                    </div>
                 </article>
 
             </div>
         </section>
-
+        
         <!-- TESTIMONIOS -->
         <section class="section">
             <h2 class="section-title">TESTIMONIOS</h2>
@@ -158,7 +168,6 @@
         <footer>
             ©2026 | Ana Cerón Novoa
         </footer>
-
     </main>
 
     <script src="assets/js/main.js"></script>

@@ -226,3 +226,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     render();
 });
+
+// *** beneficios / paso a paso: tarjetas expandibles ***//
+(function () {
+    const track = document.getElementById('pasosTrack');
+    if (!track) return;
+
+    const cards = track.querySelectorAll('.paso-card');
+    const hoverCapable = window.matchMedia('(hover: hover)').matches;
+
+    function activate(index) {
+        cards.forEach((card, i) => {
+            card.classList.toggle('active', i === index);
+        });
+    }
+
+    cards.forEach((card, i) => {
+        if (hoverCapable) {
+            card.addEventListener('mouseenter', () => activate(i));
+        } else {
+            card.addEventListener('click', () => activate(i));
+        }
+    });
+})();

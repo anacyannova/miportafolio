@@ -12457,6 +12457,40 @@ blockquote {
   background: var(--acento);
 }
 
+.carousel-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  border: none;
+  background: var(--tag);
+  color: var(--texto-tarjetas);
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s, color 0.2s;
+}
+.carousel-flecha:hover, .carousel-flecha:focus-visible {
+  background: var(--acento);
+  color: var(--fondo-principal);
+}
+.carousel-flecha:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+}
+
+.carousel-flecha-prev {
+  left: 16px;
+}
+
+.carousel-flecha-next {
+  right: 16px;
+}
+
 .proyecto-resumen {
   margin-top: var(--section-gap-large);
   padding: 60px 80px;

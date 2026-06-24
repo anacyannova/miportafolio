@@ -1,10 +1,7 @@
-// =====================
-// TOGGLE TEMA CLARO/OSCURO
-// =====================
+// *** toggle para tema dark o light *** //
 
 const themeToggle = document.getElementById('themeToggle');
 
-// Al cargar, revisar si el usuario tenía preferencia guardada
 if (localStorage.getItem('tema') === 'light') {
     document.documentElement.classList.add('light');
 }
@@ -15,9 +12,7 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('tema', tema);
 });
 
-// =====================
-// MENÚ HAMBURGUESA
-// =====================
+// *** menu borgir *** //
 
 const menuToggle = document.querySelector('.menu-toggle');
 const sidebar = document.getElementById('sidebar');
@@ -28,7 +23,7 @@ menuToggle.addEventListener('click', () => {
     menuToggle.setAttribute('aria-expanded', isOpen);
 });
 
-// Cerrar menú al hacer clic en un link (en mobile)
+
 sidebar.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         sidebar.classList.remove('open');
@@ -37,50 +32,97 @@ sidebar.querySelectorAll('a').forEach(link => {
     });
 });
 
-// *** carousel automático de proyecto ***//
-// Loop infinito, cambia de slide cada 3 segundos, con barra de progreso animada.
+// *** carousel pag  single-proyecto ***//
 
 document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.getElementById('proyectoCarousel');
     if (!carousel) return;
-
+    
     const track = carousel.querySelector('.carousel-track');
     const slides = carousel.querySelectorAll('.carousel-slide');
     const progressBar = document.getElementById('carouselProgressBar');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
     const total = slides.length;
     const intervalMs = 3000;
-
+    
     let current = 0;
+    let timeoutId = null;
+    let isPaused = false;
+    
 
     function goToSlide(index) {
         current = index;
         track.style.transition = 'transform 0.6s ease-in-out';
         track.style.transform = `translateX(-${current * (100 / total)}%)`;
         restartProgress();
+        scheduleNext();
     }
-
+    
     function nextSlide() {
-        const next = (current + 1) % total;
-        goToSlide(next);
+        goToSlide((current + 1) % total);
     }
-
+    
+    function prevSlide() {
+        goToSlide((current - 1 + total) % total);
+    }
+    
     function restartProgress() {
         if (!progressBar) return;
         progressBar.style.transition = 'none';
         progressBar.style.width = '0%';
-        // forzar reflow antes de animar
+
         void progressBar.offsetWidth;
+        if (isPaused) return;
         progressBar.style.transition = `width ${intervalMs}ms linear`;
         progressBar.style.width = '100%';
     }
+    
+    function scheduleNext() {
+        clearTimeout(timeoutId);
+        if (isPaused) return;
+        timeoutId = setTimeout(nextSlide, intervalMs);
+    }
+    
+    function pause() {
+        isPaused = true;
+        clearTimeout(timeoutId);
+        if (progressBar) {
 
+            const currentWidth = getComputedStyle(progressBar).width;
+            progressBar.style.transition = 'none';
+            progressBar.style.width = currentWidth;
+        }
+    }
+    
+    function resume() {
+        if (!isPaused) return;
+        isPaused = false;
+        restartProgress();
+        scheduleNext();
+    }
+    
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+    carousel.addEventListener('mouseenter', pause);
+    carousel.addEventListener('mouseleave', resume);
+    carousel.addEventListener('focusin', pause);
+    carousel.addEventListener('focusout', resume);
+    if (prevBtn) {
+        prevBtn.addEventListener('mouseenter', pause);
+        prevBtn.addEventListener('mouseleave', resume);
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('mouseenter', pause);
+        nextBtn.addEventListener('mouseleave', resume);
+    }
+    
     restartProgress();
-    setInterval(nextSlide, intervalMs);
+    scheduleNext();
 });
 
-// *** acordeón de servicios ***//
-// Abre un panel a la vez. Al hacer click en otro item, el anterior se cierra.
-// Todos empiezan cerrados.
+// *** acordeón pag servicios ***//
 
 document.addEventListener('DOMContentLoaded', () => {
     const accordion = document.getElementById('serviciosAccordion');
@@ -94,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const panel = item.querySelector('.servicios-accordion-panel');
             const isOpen = trigger.getAttribute('aria-expanded') === 'true';
 
-            // cierra todos los demás items
             triggers.forEach(otherTrigger => {
                 if (otherTrigger !== trigger) {
                     otherTrigger.setAttribute('aria-expanded', 'false');
@@ -103,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // alterna el item clickeado
             if (isOpen) {
                 trigger.setAttribute('aria-expanded', 'false');
                 panel.style.maxHeight = null;
@@ -114,12 +154,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-// *** bitácora: filtro de tags + paginación ***//
-// Filtro multi-selección por tags (data-tags en cada tarjeta) y paginación
-// que se recalcula según las tarjetas visibles tras el filtro.
-// Pensado para migrar a WordPress: cada tarjeta = un post, cada tag = una
-// taxonomía. El filtro hoy es JS puro; en WP se puede mantener igual
-// (ocultando/mostrando posts ya cargados) o pasar a queries por categoría.
+
+// *** filtro de tags + paginación pag bitácora ***//
+
+// pensado para migrar a WordPress: cada tarjeta = un post, cada tag = una
 
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('bitacoraGrid');
@@ -167,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const inicio = (paginaActual - 1) * ITEMS_POR_PAGINA;
         const fin = inicio + ITEMS_POR_PAGINA;
 
-        // oculta todas, luego muestra solo las que coinciden y caen en la página actual
         cards.forEach(card => card.classList.add('is-hidden'));
         visibles.slice(inicio, fin).forEach(card => card.classList.remove('is-hidden'));
 
@@ -227,7 +264,8 @@ document.addEventListener('DOMContentLoaded', () => {
     render();
 });
 
-// *** beneficios / paso a paso: tarjetas expandibles ***//
+// *** beneficios / paso a paso: tarjetas pag servicios ***//
+
 (function () {
     const track = document.getElementById('pasosTrack');
     if (!track) return;
@@ -250,7 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 })();
 
-// *** efecto tilt bitácora *** //
+// *** efecto tilt pág bitácora *** //
+
 (function () {
 
     const cards = document.querySelectorAll('.bitacora-card');
@@ -293,6 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 // *** AOS animacionnn ***//
+
 if (typeof AOS !== 'undefined') {
     AOS.init({
         duration: 700,

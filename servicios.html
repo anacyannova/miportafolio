@@ -6,6 +6,7 @@
     <title>Servicios | ACN Portafolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -43,15 +44,15 @@
 
     <main>
         <section class="page-header servicios-header">
-            <h1>SERVICIOS</h1>
-            <h2>¿TIENES UNA IDEA? LA REALIZO POR TI</h2>
+            <h1 data-aos="fade-down">SERVICIOS</h1>
+            <h2 data-aos="fade-up">¿TIENES UNA IDEA? LA REALIZO POR TI</h2>
         </section>
 
         <!-- ACORDEÓN DE SERVICIOS -->
         <section class="section">
             <div class="servicios-accordion" id="serviciosAccordion">
 
-                <article class="servicios-accordion-item">
+                <article class="servicios-accordion-item" data-aos="fade-up">
                     <button class="servicios-accordion-trigger" aria-expanded="false">
                         <h3>DISEÑO UI | UX</h3>
                         <span class="servicios-accordion-icon"></span>
@@ -70,7 +71,7 @@
                     </div>
                 </article>
 
-                <article class="servicios-accordion-item">
+                <article class="servicios-accordion-item" data-aos="fade-up" data-aos-delay="100">
                     <button class="servicios-accordion-trigger" aria-expanded="false">
                         <h3>DESARROLLO WEB</h3>
                         <span class="servicios-accordion-icon"></span>
@@ -89,7 +90,7 @@
                     </div>
                 </article>
 
-                <article class="servicios-accordion-item">
+                <article class="servicios-accordion-item" data-aos="fade-up" data-aos-delay="200">
                     <button class="servicios-accordion-trigger" aria-expanded="false">
                         <h3>POSICIONAMIENTO WEB</h3>
                         <span class="servicios-accordion-icon"></span>
@@ -113,8 +114,8 @@
 
         <!-- BENEFICIOS / PASO A PASO -->
         <section class="section">
-            <h2 class="section-title">BENEFICIOS / PASO A PASO</h2>
-            <div class="pasos-track" id="pasosTrack">
+            <h2 class="section-title" data-aos="fade-up">BENEFICIOS / PASO A PASO</h2>
+            <div class="pasos-track" id="pasosTrack" data-aos="fade-up">
 
                 <article class="paso-card active" data-index="0">
                     <div class="paso-card-content">
@@ -145,10 +146,10 @@
         
         <!-- TESTIMONIOS -->
         <section class="section">
-            <h2 class="section-title">TESTIMONIOS</h2>
+            <h2 class="section-title" data-aos="fade-up">TESTIMONIOS</h2>
             <div class="row g-2 projects-grid giga-grid">
 
-                <article class="col-12 project-card giga-card">
+                <article class="col-12 project-card giga-card" data-aos="fade-up">
                     <div class="project-media">
                         <img class="project-thumbnail" src="assets/img/capacitaciones-proyecto.png" alt="Proyecto Capacitaciones MASS">
                         <video class="project-video" autoplay loop muted playsinline>
@@ -170,6 +171,7 @@
         </footer>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
     <title>Home | ACN Portafolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -59,10 +60,10 @@
 
         <!-- PROYECTOS DESTACADOS -->
         <section class="section">
-            <h2 class="section-title">PROYECTOS DESTACADOS</h2>
+            <h2 class="section-title" data-aos="fade-up">PROYECTOS DESTACADOS</h2>
             <div class="row g-2 projects-grid">
 
-                <article class="col-6 project-card">
+                <article class="col-6 project-card" data-aos="fade-up">
                     <div class="project-media">
                         <img class="project-thumbnail" src="assets/img/capacitaciones-proyecto.png" alt="Proyecto Capacitaciones MASS">
                         <video class="project-video" autoplay loop muted playsinline>
@@ -73,9 +74,9 @@
                     <span class="project-category">ELEARNING</span>
                 </article>
 
-                <article class="col-6 project-card">
+                <article class="col-6 project-card" data-aos="fade-up" data-aos-delay="150">
                     <div class="project-media">
-                        <img class="project-thumbnail" src="assets/img/fanstore-gaga-proyecto.png" alt="Tienda Fan de Lady Gaga">
+                        <img class="project-thumbnail" src="assets/img/fanstore-gaga-home-site.png" alt="Tienda Fan de Lady Gaga">
                         <video class="project-video" autoplay loop muted playsinline>
                             <source src="assets/video/video-fanstore-lady-gaga.mp4" type="video/mp4">
                         </video>
@@ -92,13 +93,13 @@
 
         <!-- BIO -->
         <section class="bio-skills">
-            <div class="bio-text">
+            <div class="bio-text" data-aos="fade-right">
                 <h2 class="section-title">BIO</h2>
                 <img src="assets/img/quote.png" alt="emoji de cita" class="bio-symbol">
                 <blockquote>"Me importa entender bien antes de construir. Llevo una década trabajando con clientes y eso define cómo escucho, propongo y ejecuto".</blockquote>
                 <p>Foco en Front-End, formación en Duoc UC y Artes Visuales, con ojo para el detalle y el propósito de comunicar lo que hace única a cada marca.</p>
             </div>
-            <div class="bio-skills-col">
+            <div class="bio-skills-col" data-aos="fade-left">
                 <h2 class="section-title">STACK & HABILIDADES</h2>
                 <div class="skills d-flex flex-wrap gap-2">
                     <span>#WordPress</span>
@@ -120,23 +121,23 @@
 
         <!-- SERVICIOS -->
         <section class="section">
-            <h2 class="section-title">SERVICIOS</h2>
+            <h2 class="section-title" data-aos="fade-up">SERVICIOS</h2>
             <div class="row g-2 services-grid">
-                <article class="col-4 service-card">
+                <article class="col-4 service-card" data-aos="fade-up">
                     <img src="assets/img/desarrollo-img.jpg" alt="Desarrollo web">
                     <div class="service-overlay">
                         <h3>DESARROLLO WEB</h3>
                         <p>Código limpio, funcional y adaptado a tus necesidades.</p>
                     </div>
                 </article>
-                <article class="col-4 service-card">
+                <article class="col-4 service-card" data-aos="fade-up" data-aos-delay="150">
                     <img src="assets/img/diseño-img.jpg" alt="Diseño web">
                     <div class="service-overlay">
                         <h3>DISEÑO WEB</h3>
                         <p>Sitios con identidad visual clara y experiencia de usuario cuidada.</p>
                     </div>
                 </article>
-                <article class="col-4 service-card">
+                <article class="col-4 service-card" data-aos="fade-up" data-aos-delay="300">
                     <img src="assets/img/posicionamiento-img.jpg" alt="Posicionamiento web">
                     <div class="service-overlay">
                         <h3>POSICIONAMIENTO WEB</h3>
@@ -151,11 +152,11 @@
 
         <!-- BITÁCORA -->
         <section class="bitacora-banner">
-            <div class="bitacora-image">
+            <div class="bitacora-image" data-aos="fade-up">
                 <img src="assets/img/bitacora-preview.png" alt="Vista previa bitácora">
             </div>
             <div class="bitacora-content d-flex flex-column justify-content-center align-items-start">
-                <div class="bitacora-text">
+                <div class="bitacora-text" data-aos="fade-left">
                     <h2>BITÁCORA</h2>
                     <p class="mt-3">Una sección en la cual comparto mis experiencias en base a aprendizajes, dificultades y encantos que tiene el desarrollar y diseñar sitios web. Una forma de registrar el camino recorrido a través de la redacción de contenidos.</p>
                     <a href="bitacora.html" class="btn mt-4">Explorar</a>
@@ -169,6 +170,7 @@
 
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

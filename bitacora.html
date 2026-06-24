@@ -6,6 +6,7 @@
     <title>Bitácora | ACN Portafolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -43,15 +44,15 @@
 
     <main>
         <section class="page-header bitacora-header">
-            <h1>BITÁCORA</h1>
-            <p>Un registro sobre procesos, aprendizajes, decisiones y lo que se vuelve a intentar.</p>
+            <h1 data-aos="fade-down">BITÁCORA</h1>
+            <p data-aos="fade-up">Un registro sobre procesos, aprendizajes, decisiones y lo que se vuelve a intentar.</p>
         </section>
 
         <section class="section">
-            <h2 class="section-title">EL REGISTRO</h2>
+            <h2 class="section-title" data-aos="fade-up">EL REGISTRO</h2>
 
             <!-- FILTRO DE TAGS -->
-            <div class="bitacora-filtros" id="bitacoraFiltros">
+            <div class="bitacora-filtros" id="bitacoraFiltros" data-aos="fade-up">
                 <span class="filtro-icono" aria-hidden="true">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
                         <line x1="4" y1="6" x2="20" y2="6"></line>
@@ -163,6 +164,7 @@
 
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

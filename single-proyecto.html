@@ -6,6 +6,7 @@
     <title>Capacitaciones MASS | ACN Portafolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -48,7 +49,7 @@
         </section>
 
         <!-- CAROUSEL DE IMÁGENES DEL PROYECTO -->
-        <section class="proyecto-carousel">
+        <section class="proyecto-carousel" data-aos="fade-up">
             <div class="carousel" id="proyectoCarousel">
                 <div class="carousel-track">
                     <div class="carousel-slide">
@@ -68,7 +69,7 @@
         </section>
 
         <!-- SOBRE ESTE PROYECTO -->
-        <section class="proyecto-resumen">
+        <section class="proyecto-resumen" data-aos="fade-up">
             <div class="proyecto-tags">
                 <span>#WordPress</span>
                 <span>#Diseño UX</span>
@@ -82,36 +83,36 @@
 
         <!-- PALETA DE COLOR & PROCESO -->
         <section class="section">
-            <h2 class="section-title">PALETA DE COLOR & PROCESO</h2>
+            <h2 class="section-title" data-aos="fade-up">PALETA DE COLOR & PROCESO</h2>
 
             <div class="paleta-grid">
 
                 <!-- fila superior -->
-                <div class="paleta-swatch top-1" style="background:#E8EEFB;"></div>
-                <div class="paleta-swatch top-2" style="background:#F2F4F8;"></div>
-                <div class="paleta-swatch top-3" style="background:#0040C9;"></div>
+                <div class="paleta-swatch top-1" style="background:#E8EEFB;" data-aos="zoom-in" data-aos-delay="0"></div>
+                <div class="paleta-swatch top-2" style="background:#F2F4F8;" data-aos="zoom-in" data-aos-delay="50"></div>
+                <div class="paleta-swatch top-3" style="background:#0040C9;" data-aos="zoom-in" data-aos-delay="100"></div>
 
                 <!-- lateral izquierdo -->
-                <div class="paleta-swatch left" style="background:#CBD9F5;"></div>
+                <div class="paleta-swatch left" style="background:#CBD9F5;" data-aos="fade-right" data-aos-delay="100"></div>
 
                 <!-- imagen -->
-                <div class="paleta-imagen">
+                <div class="paleta-imagen" data-aos="zoom-in" data-aos-delay="150">
                     <img src="assets/img/capacitaciones-proyecto.png" alt="vista de la home de Capacitaciones MASS">
                 </div>
 
                 <!-- lateral derecho -->
-                <div class="paleta-swatch right" style="background:#1A3F8F;"></div>
+                <div class="paleta-swatch right" style="background:#1A3F8F;" data-aos="fade-left" data-aos-delay="100"></div>
 
                 <!-- fila inferior -->
-                <div class="paleta-swatch bottom-1" style="background:#8FB6D9;"></div>
-                <div class="paleta-swatch bottom-2" style="background:#5C92B0;"></div>
-                <div class="paleta-swatch bottom-3" style="background:#5A6FAE;"></div>
+                <div class="paleta-swatch bottom-1" style="background:#8FB6D9;" data-aos="zoom-in" data-aos-delay="150"></div>
+                <div class="paleta-swatch bottom-2" style="background:#5C92B0;" data-aos="zoom-in" data-aos-delay="200"></div>
+                <div class="paleta-swatch bottom-3" style="background:#5A6FAE;" data-aos="zoom-in" data-aos-delay="250"></div>
             </div>
         </section>
 
         <!-- DETALLES TÉCNICOS -->
         <section class="section proyecto-detalles">
-            <div class="detalles-tags">
+            <div class="detalles-tags" data-aos="fade-right">
                 <div class="detalles-skills">
                     <span>#PHP</span>
                     <span>#WordPress</span>
@@ -122,11 +123,11 @@
                     <span>#Certificados Automáticos</span>
                 </div>
             </div>
-            <div class="detalles-texto">
+            <div class="detalles-texto" data-aos="fade-left">
                 <h2 class="section-title">DETALLES TÉCNICOS</h2>
                 <p>La plataforma fue desarrollada con código propio sobre WordPress, prescindiendo de constructores visuales para tener control total sobre la estructura y el rendimiento. Se implementó un sistema de roles personalizado que permite a los administradores de cada sucursal gestionar sus trabajadores de forma independiente. La entrega de certificados se automatizó mediante un plugin de envío por correo, complementando el botón de descarga integrado en la misma plataforma. Se priorizó una interfaz simple y directa, pensada para usuarios no técnicos que necesitan operar el sistema sin pasos innecesarios.</p>
             </div>
-            <div class="detalles-botones">
+            <div class="detalles-botones" data-aos="fade-up">
                 <a href="#" class="btn">Ver repositorio</a>
                 <a href="#" class="btn">Visita el sitio</a>
             </div>
@@ -138,6 +139,7 @@
 
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

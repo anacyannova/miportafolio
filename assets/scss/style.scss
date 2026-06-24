@@ -1293,52 +1293,52 @@ footer {
     }
     // *** servicios mobile *** //
     .pasos-track {
-    flex-direction: column;
-    min-height: auto;
-    gap: 9px;
+        flex-direction: column;
+        min-height: auto;
+        gap: 9px;
 
-    .paso-card {
-        flex: none !important;
-        width: 100%;
-        min-height: 120px;
-        padding: 36px 24px;
-        overflow: hidden;
-        transition: min-height .45s ease;
-
-        .paso-card-content {
-            text-align: center;
-        }
-
-        .paso-card-number {
-            display: block;
-        }
-
-        .paso-card-title,
-        .paso-card-desc {
-            opacity: 0;
-            max-height: 0;
+        .paso-card {
+            flex: none !important;
+            width: 100%;
+            min-height: 120px;
+            padding: 36px 24px;
             overflow: hidden;
-            transform: translateY(12px);
-            transition:
-                opacity .35s ease,
-                transform .35s ease,
-                max-height .45s ease;
-        }
+            transition: min-height .45s ease;
 
-        &.active {
-            min-height: 220px;
+            .paso-card-content {
+                text-align: center;
+            }
 
             .paso-card-number {
-                display: none;
+                display: block;
             }
 
             .paso-card-title,
             .paso-card-desc {
-                opacity: 1;
-                max-height: 300px;
-                transform: translateY(0);
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                transform: translateY(12px);
+                transition:
+                    opacity .35s ease,
+                    transform .35s ease,
+                    max-height .45s ease;
+            }
+
+            &.active {
+                min-height: 220px;
+
+                .paso-card-number {
+                    display: none;
+                }
+
+                .paso-card-title,
+                .paso-card-desc {
+                    opacity: 1;
+                    max-height: 300px;
+                    transform: translateY(0);
+                }
             }
         }
     }
-}
 }

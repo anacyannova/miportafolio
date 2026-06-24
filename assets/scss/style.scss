@@ -28,10 +28,17 @@ h1 {
     line-height: 1.1;
 }
 
+p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
 main {
     margin-left: var(--sidebar-width);
     padding-right: var(--content-padding-right);
 }
+
+
 // *** componentes globales *** //
 
 .page-header {
@@ -185,7 +192,6 @@ main {
 .hero p {
     margin-top: 25px;
     max-width: 400px;
-    line-height: 1.7;
 }
 
 .hero-image img {
@@ -217,9 +223,7 @@ blockquote {
 }
 
 .bio-text p {
-    line-height: 150%;
     margin-left: 20px;
-    font-size: 18px;
 }
 
 .skills {
@@ -274,8 +278,6 @@ blockquote {
     }
 
     p {
-        font-size: 18px;
-        line-height: 150%;
         color: var(--texto-tarjetas);
     }
 }
@@ -323,9 +325,7 @@ blockquote {
                 margin-bottom: 30px;
             }
             p {
-                line-height: 1.6;
                 color: var(--texto-tarjetas);
-                font-size: 18px;
                 width: 100%;
             }
         }
@@ -480,8 +480,6 @@ blockquote {
 
     p {
         max-width: 620px;
-        line-height: 1.7;
-        font-size: 18px;
         color: var(--texto-tarjetas);
         grid-column: 1;
     }
@@ -582,8 +580,6 @@ blockquote {
 
         p {
             max-width: 620px;
-            line-height: 1.7;
-            font-size: 18px;
         }
     }
 
@@ -698,8 +694,6 @@ blockquote {
     max-width: 720px;
 
     p {
-        line-height: 1.7;
-        font-size: 18px;
         color: var(--texto-principal);
     }
 
@@ -709,8 +703,8 @@ blockquote {
         list-style: disc;
 
         li {
-            font-size: 16px;
-            line-height: 1.8;
+            font-size: 18px;
+            line-height: 1.7;
             color: var(--texto-principal);
         }
     }
@@ -789,7 +783,7 @@ blockquote {
 .paso-card-desc {
     font-family: var(--font-texto);
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--texto-tarjetas);
     margin: 0;
     text-align: center;
@@ -806,7 +800,6 @@ blockquote {
     p {
         margin-top: 20px;
         max-width: 500px;
-        line-height: 1.7;
     }
 }
 
@@ -832,7 +825,7 @@ blockquote {
     border: 1px solid var(--tag);
     background: transparent;
     padding: 8px 18px;
-    font-size: 13px;
+    font-size: 12px;
     font-family: var(--font-titulo);
     color: var(--tag);
     letter-spacing: 3%;
@@ -1018,7 +1011,7 @@ blockquote {
     span {
         border: 1px solid var(--texto-tarjetas);
         padding: 6px 14px;
-        font-size: 11px;
+        font-size: 12px;
         font-family: var(--font-titulo);
         color: var(--texto-tarjetas);
         letter-spacing: 3%;
@@ -1032,8 +1025,7 @@ blockquote {
 }
 
 .post-intro-subtitle {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 24px;
     letter-spacing: 3%;
     color: var(--texto-tarjetas);
     text-transform: uppercase;
@@ -1041,15 +1033,12 @@ blockquote {
 }
 
 .post-intro-info p {
-    line-height: 1.7;
     color: var(--texto-tarjetas);
 }
 
 // *** cuerpo del post ***//
-.post-parrafo-ancho {
+.post-parrafo-ancho { //esto es un parrafo btw
     max-width: 900px;
-    line-height: 1.8;
-    font-size: 18px;
     color: var(--texto-principal);
 }
 
@@ -1061,15 +1050,25 @@ blockquote {
     align-items: start;
 }
 
+.post-bloque-1 {
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.post-bloque-2 {
+    grid-template-columns: 1.2fr 0.8fr;
+}
+
+.post-bloque-img {
+    max-width: 420px;
+}
+
 .post-bloque-img img {
     width: 100%;
-    display: block;
 }
 
 .post-bloque-texto p {
-    line-height: 1.8;
-    font-size: 18px;
     color: var(--texto-principal);
+    max-width: 360px;
 }
 
 .post-bloque-2 {
@@ -1077,15 +1076,15 @@ blockquote {
 }
 
 .post-reflexion {
-    text-align: end;
-    padding: 0 40px;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0;
 
     p {
         max-width: 460px;
         margin: 0 auto;
-        line-height: 1.9;
-        font-size: 18px;
         color: var(--texto-principal);
+        line-height: 1.9;
     }
 }
 

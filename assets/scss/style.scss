@@ -23,7 +23,6 @@ $btn-font-family:   'Outfit', sans-serif;
 
 // **************** CSS PARA TODO EL SITIO  *******************//
 h1 {
-    font-size: 63px;
     letter-spacing: 3%;
     line-height: 1.1;
 }
@@ -168,6 +167,9 @@ main {
     grid-template-columns: 1fr 600px;
     gap: var(--grid-gap);
     align-items: center;
+    h1{
+        font-size: var(--h1-hero);
+    }
 }
 
 .breadcrumb {
@@ -333,6 +335,14 @@ blockquote {
 }
 
 // ***************************** PROYECTOS ************************* //
+
+.proyectos-header{
+    h1 {
+        font-size: var(--h1-pagina);
+        letter-spacing: 3%;
+        line-height: 1.1;
+    }
+}
 
 // *** tarjetas proyectos / proyectos destacados ***//
 .project-media {
@@ -1147,7 +1157,8 @@ footer {
 
 @include mobile {
     :root {
-        --h1-pagina:   46px;
+        --h1-hero: 54px;
+        --h1-pagina: 46px;
         --h2-estandar: 30px;
         --h3-estandar: 26px;
     }
@@ -1195,9 +1206,6 @@ footer {
         grid-template-columns: 1fr;
         gap: 15px;
         min-height: auto;
-
-        h1 { font-size: 54px; }
-        h2 { font-size: var(--h2-estandar); }
     }
 
     .hero-image { 

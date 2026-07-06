@@ -30,6 +30,7 @@
 :root {
   --font-titulo: 'Outfit', sans-serif;
   --font-texto: 'Nunito Sans', sans-serif;
+  --h1-hero: 63px;
   --h1-pagina: 54px;
   --h2-estandar: 36px;
   --h3-estandar: 30px;
@@ -12057,7 +12058,6 @@ a:hover {
 }
 
 h1, .h1 {
-  font-size: 63px;
   letter-spacing: 3%;
   line-height: 1.1;
 }
@@ -12201,6 +12201,9 @@ main {
   grid-template-columns: 1fr 600px;
   gap: var(--grid-gap);
   align-items: center;
+}
+.hero h1, .hero .h1 {
+  font-size: var(--h1-hero);
 }
 
 .breadcrumb {
@@ -12352,6 +12355,12 @@ blockquote {
 .bitacora-banner .bitacora-content .bitacora-text p {
   color: var(--texto-tarjetas);
   width: 100%;
+}
+
+.proyectos-header h1, .proyectos-header .h1 {
+  font-size: var(--h1-pagina);
+  letter-spacing: 3%;
+  line-height: 1.1;
 }
 
 .project-media {
@@ -13106,6 +13115,7 @@ footer {
 
 @media (max-width: 900px) {
   :root {
+    --h1-hero: 54px;
     --h1-pagina: 46px;
     --h2-estandar: 30px;
     --h3-estandar: 26px;
@@ -13156,12 +13166,6 @@ footer {
     grid-template-columns: 1fr;
     gap: 15px;
     min-height: auto;
-  }
-  .hero h1, .hero .h1 {
-    font-size: 54px;
-  }
-  .hero h2, .hero .h2 {
-    font-size: var(--h2-estandar);
   }
   .hero-image {
     order: 2;

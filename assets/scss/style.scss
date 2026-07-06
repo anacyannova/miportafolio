@@ -23,7 +23,7 @@ $btn-font-family:   'Outfit', sans-serif;
 
 // **************** CSS PARA TODO EL SITIO  *******************//
 h1 {
-    font-size: 64px;
+    font-size: 63px;
     letter-spacing: 3%;
     line-height: 1.1;
 }
@@ -186,7 +186,7 @@ main {
 
 .hero h2 {
     margin-top: 20px;
-    font-size: 36px;
+    font-size: var(--h2-estandar);
 }
 
 .hero p {
@@ -270,7 +270,7 @@ blockquote {
     transition: opacity 0.3s ease;
 
     h3 {
-        font-size: 30px;
+        font-size: var(--h3-estandar);
         font-weight: 400;
         letter-spacing: 3%;
         color: var(--texto-tarjetas);
@@ -318,7 +318,7 @@ blockquote {
             margin-left: 600px;
 
             h2 {
-                font-size: 36px;
+                font-size: var(--h2-estandar);
                 font-weight: 300;
                 letter-spacing: 3%;
                 color: var(--texto-tarjetas);
@@ -366,7 +366,7 @@ blockquote {
 .project-card h3 {
     margin-top: 20px;
     font-weight: 300;
-    font-size: 21px;
+    font-size: var(--h3-estandar);
     letter-spacing: 3%;
 
     a {
@@ -513,6 +513,7 @@ blockquote {
         color: var(--texto-tarjetas);
         margin-bottom: 30px;
         grid-column: 1;
+        font-size: var(--h2-estandar);
     }
 
     p {
@@ -632,10 +633,10 @@ blockquote {
 
 .servicios-header {
     h1 {
-        font-size: 48px;
+        font-size: var(--h1-pagina);
     }
 
-    h2 {
+    p {
         margin-top: 20px;
         font-size: 24px;
         font-weight: 300;
@@ -681,7 +682,7 @@ blockquote {
     h3 {
         font-family: var(--font-titulo);
         font-weight: 300;
-        font-size: 28px;
+        font-size: var(--h3-estandar);
         letter-spacing: 3%;
         color: var(--texto-principal);
         transition: color 0.2s;
@@ -831,7 +832,7 @@ blockquote {
 
 .bitacora-header {
     h1 {
-        font-size: 48px;
+        font-size: var(--h1-pagina);
     }
 
     p {
@@ -925,7 +926,7 @@ blockquote {
 .bitacora-card h3 {
     margin-top: 25px;
     font-weight: 400;
-    font-size: 24px;
+    font-size: var(--h3-estandar);
     letter-spacing: 3%;
     overflow-wrap: break-word;
 
@@ -1028,7 +1029,7 @@ blockquote {
     justify-content: center;
 
     h1 {
-        font-size: 36px;
+        font-size: var(--h1-pagina);
         font-weight: 300;
         letter-spacing: 3%;
         color: var(--texto-tarjetas);
@@ -1063,7 +1064,7 @@ blockquote {
 }
 
 .post-intro-subtitle {
-    font-size: 24px;
+    font-size: 36px;
     letter-spacing: 3%;
     color: var(--texto-tarjetas);
     text-transform: uppercase;
@@ -1145,6 +1146,11 @@ footer {
 // ************************ RESPONSIVE **************************// 
 
 @include mobile {
+    :root {
+        --h1-pagina:   46px;
+        --h2-estandar: 30px;
+        --h3-estandar: 26px;
+    }
 
     .menu-toggle {
         display: flex;
@@ -1190,8 +1196,8 @@ footer {
         gap: 15px;
         min-height: auto;
 
-        h1 { font-size: 40px; }
-        h2 { font-size: 28px; }
+        h1 { font-size: 54px; }
+        h2 { font-size: var(--h2-estandar); }
     }
 
     .hero-image { 

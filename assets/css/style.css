@@ -30,6 +30,9 @@
 :root {
   --font-titulo: 'Outfit', sans-serif;
   --font-texto: 'Nunito Sans', sans-serif;
+  --h1-pagina: 54px;
+  --h2-estandar: 36px;
+  --h3-estandar: 30px;
   --sidebar-width: 220px;
   --content-padding-right: 80px;
   --page-start: 90px;
@@ -12054,7 +12057,7 @@ a:hover {
 }
 
 h1, .h1 {
-  font-size: 64px;
+  font-size: 63px;
   letter-spacing: 3%;
   line-height: 1.1;
 }
@@ -12216,7 +12219,7 @@ main {
 
 .hero h2, .hero .h2 {
   margin-top: 20px;
-  font-size: 36px;
+  font-size: var(--h2-estandar);
 }
 
 .hero p {
@@ -12298,7 +12301,7 @@ blockquote {
   transition: opacity 0.3s ease;
 }
 .service-overlay h3, .service-overlay .h3 {
-  font-size: 30px;
+  font-size: var(--h3-estandar);
   font-weight: 400;
   letter-spacing: 3%;
   color: var(--texto-tarjetas);
@@ -12340,7 +12343,7 @@ blockquote {
   margin-left: 600px;
 }
 .bitacora-banner .bitacora-content .bitacora-text h2, .bitacora-banner .bitacora-content .bitacora-text .h2 {
-  font-size: 36px;
+  font-size: var(--h2-estandar);
   font-weight: 300;
   letter-spacing: 3%;
   color: var(--texto-tarjetas);
@@ -12383,7 +12386,7 @@ blockquote {
 .project-card h3, .project-card .h3 {
   margin-top: 20px;
   font-weight: 300;
-  font-size: 21px;
+  font-size: var(--h3-estandar);
   letter-spacing: 3%;
 }
 .project-card h3 a, .project-card .h3 a {
@@ -12520,6 +12523,7 @@ blockquote {
   color: var(--texto-tarjetas);
   margin-bottom: 30px;
   grid-column: 1;
+  font-size: var(--h2-estandar);
 }
 .proyecto-resumen p {
   max-width: 620px;
@@ -12637,9 +12641,9 @@ blockquote {
 }
 
 .servicios-header h1, .servicios-header .h1 {
-  font-size: 48px;
+  font-size: var(--h1-pagina);
 }
-.servicios-header h2, .servicios-header .h2 {
+.servicios-header p {
   margin-top: 20px;
   font-size: 24px;
   font-weight: 300;
@@ -12683,7 +12687,7 @@ blockquote {
 .servicios-accordion-trigger h3, .servicios-accordion-trigger .h3 {
   font-family: var(--font-titulo);
   font-weight: 300;
-  font-size: 28px;
+  font-size: var(--h3-estandar);
   letter-spacing: 3%;
   color: var(--texto-principal);
   transition: color 0.2s;
@@ -12815,7 +12819,7 @@ blockquote {
 }
 
 .bitacora-header h1, .bitacora-header .h1 {
-  font-size: 48px;
+  font-size: var(--h1-pagina);
 }
 .bitacora-header p {
   margin-top: 20px;
@@ -12902,7 +12906,7 @@ blockquote {
 .bitacora-card h3, .bitacora-card .h3 {
   margin-top: 25px;
   font-weight: 400;
-  font-size: 24px;
+  font-size: var(--h3-estandar);
   letter-spacing: 3%;
   overflow-wrap: break-word;
 }
@@ -12999,7 +13003,7 @@ blockquote {
   justify-content: center;
 }
 .post-intro-info h1, .post-intro-info .h1 {
-  font-size: 36px;
+  font-size: var(--h1-pagina);
   font-weight: 300;
   letter-spacing: 3%;
   color: var(--texto-tarjetas);
@@ -13030,7 +13034,7 @@ blockquote {
 }
 
 .post-intro-subtitle {
-  font-size: 24px;
+  font-size: 36px;
   letter-spacing: 3%;
   color: var(--texto-tarjetas);
   text-transform: uppercase;
@@ -13101,6 +13105,11 @@ footer {
 }
 
 @media (max-width: 900px) {
+  :root {
+    --h1-pagina: 46px;
+    --h2-estandar: 30px;
+    --h3-estandar: 26px;
+  }
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -13149,10 +13158,10 @@ footer {
     min-height: auto;
   }
   .hero h1, .hero .h1 {
-    font-size: 40px;
+    font-size: 54px;
   }
   .hero h2, .hero .h2 {
-    font-size: 28px;
+    font-size: var(--h2-estandar);
   }
   .hero-image {
     order: 2;

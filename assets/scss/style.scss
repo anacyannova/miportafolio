@@ -1205,7 +1205,6 @@ footer {
         --h2-estandar: 30px;
         --h3-estandar: 26px;
     }
-
     .menu-toggle {
         display: flex;
         flex-direction: column;
@@ -1219,7 +1218,6 @@ footer {
         border: none;
         cursor: pointer;
         padding: 8px;
-
         span {
             display: block;
             width: 22px;
@@ -1227,63 +1225,55 @@ footer {
             background: var(--texto-principal);
             transition: transform 0.3s, opacity 0.3s;
         }
-
         &.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
         &.active span:nth-child(2) { opacity: 0; }
         &.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     }
-
     .sidebar {
         padding-top: 90px;
-        transform: translateX(-100%);
+        left: auto;
+        right: 0;
+        transform: translateX(100%);
         transition: transform 0.3s;
         &.open { transform: translateX(0); }
     }
-
     main {
         margin-left: 0;
         padding: 30px 24px 40px;
     }
-
+    // *** index mobile *** //
     .hero {
         grid-template-columns: 1fr;
         gap: 15px;
         min-height: auto;
     }
-
     .hero-image { 
         order: 2;
         width: 90%;
         max-width: 390px;
         margin: 30px auto 0;
     }
-
     .projects-grid {
         .project-card { 
             width: 100%; 
         }
     }
-
     .bio-skills {
         grid-template-columns: 1fr;
         gap: 40px;
         margin-top: 80px;
     }
-
     .services-grid .service-card { 
         width: 80%;
         margin: 0 auto;
         margin-bottom: 9px;
     }
-
     // *** bitacora mobile *** //
-
     .bitacora-banner {
         height: auto;
         display: flex;
         flex-direction: column;
         gap: 0;
-
         .bitacora-image {
             position: relative;
             left: auto;
@@ -1294,11 +1284,9 @@ footer {
             margin-bottom: -210px;
             z-index: 2;
         }
-
         img {
             width: 100%;
         }
-
         .bitacora-content {
             position: static;
             width: 100%;
@@ -1319,31 +1307,24 @@ footer {
         
         }
     }
-
-
     // *** single proyecto mobile *** //
-
     .proyecto-resumen {
         padding: 40px 24px;
         grid-template-columns: 1fr;
-
         .proyecto-tags {
             width: 100%;
             justify-content: flex-end;
             margin-left: 0;
             margin-bottom: 30px;
         }
-
         .section-title {
             grid-column: 1;
         }
-
         p {
             grid-column: 1;
             max-width: 100%;
         }
     }
-
     .proyecto-header h1 {
         word-break: normal;
         overflow-wrap: break-word;
@@ -1352,12 +1333,10 @@ footer {
         grid-template-columns: 80px 1fr 80px;
         grid-template-rows: 51px auto 51px;
     }
-
     .proyecto-detalles {
         grid-template-columns: 1fr;
         column-gap: 0;
         row-gap: 24px;
-
         .detalles-tags {
             grid-column: 1;
             grid-row: 1;
@@ -1365,7 +1344,6 @@ footer {
             max-width: 100%;
             display: block;
         }
-
         .detalles-skills {
             width: 100%;
             display: flex;
@@ -1374,12 +1352,10 @@ footer {
             justify-content: flex-start;
             align-items: flex-start;
         }
-
         .detalles-skills span {
             width: auto;
             white-space: nowrap;
         }
-
         .detalles-texto {
             grid-column: 1;
             grid-row: 2;
@@ -1388,19 +1364,16 @@ footer {
             min-width: 0;
             text-align: left;
             justify-self: stretch;
-
             .section-title {
                 text-align: left;
                 max-width: 100%;
             }
-
             p {
                 width: 100%;
                 max-width: 100%;
                 min-width: 0;
             }
         }
-
         .detalles-botones {
             grid-column: 1;
             grid-row: 3;
@@ -1409,13 +1382,11 @@ footer {
             align-items: center;
         }
     }
-
     // *** servicios mobile *** //
     .pasos-track {
         flex-direction: column;
         min-height: auto;
         gap: 9px;
-
         .paso-card {
             flex: none !important;
             width: 100%;
@@ -1423,15 +1394,12 @@ footer {
             padding: 36px 24px;
             overflow: hidden;
             transition: min-height .45s ease;
-
             .paso-card-content {
                 text-align: center;
             }
-
             .paso-card-number {
                 display: block;
             }
-
             .paso-card-title,
             .paso-card-desc {
                 opacity: 0;
@@ -1443,14 +1411,11 @@ footer {
                     transform .35s ease,
                     max-height .45s ease;
             }
-
             &.active {
                 min-height: 220px;
-
                 .paso-card-number {
                     display: none;
                 }
-
                 .paso-card-title,
                 .paso-card-desc {
                     opacity: 1;

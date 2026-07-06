@@ -1152,7 +1152,7 @@ footer {
         gap: 5px;
         position: fixed;
         top: 20px;
-        left: 20px;
+        right: 20px;
         z-index: 200;
         background: var(--tag);
         border: none;
@@ -1201,9 +1201,6 @@ footer {
     }
 
     .projects-grid {
-        margin-left: -24px;
-        margin-right: -24px;
-
         .project-card { width: 100%; }
         .project-card h3,
         .project-category { padding-left: 24px; }
@@ -1246,20 +1243,20 @@ footer {
             position: static;
             width: 100%;
             height: auto;
-            padding: 90px 24px 40px;
+            padding: 70px 24px 40px;
             align-items: center;
-            padding-top: 70px;
             margin-top: -80px;
-        }
-        .bitacora-text{
-            margin-left: 0 !important;
-            padding-left: 39px;
-            width: 100%;
-            text-align: center;
-            margin-top: 240px;
-            h2{
-                margin-top: 39px;
+            .bitacora-text{
+                margin-left: 0;
+                padding-left: 39px;
+                width: 100%;
+                text-align: center;
+                margin-top: 240px;
+                h2{
+                    margin-top: 39px;
+                }
             }
+        
         }
     }
 
@@ -1377,5 +1374,8 @@ footer {
                 }
             }
         }
+    }
+    footer{
+        text-align: center;
     }
 }

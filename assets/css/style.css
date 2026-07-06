@@ -13107,7 +13107,7 @@ footer {
     gap: 5px;
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
     z-index: 200;
     background: var(--tag);
     border: none;
@@ -13159,10 +13159,6 @@ footer {
     max-width: 390px;
     margin: 30px auto 0;
   }
-  .projects-grid {
-    margin-left: -24px;
-    margin-right: -24px;
-  }
   .projects-grid .project-card {
     width: 100%;
   }
@@ -13203,19 +13199,18 @@ footer {
     position: static;
     width: 100%;
     height: auto;
-    padding: 90px 24px 40px;
+    padding: 70px 24px 40px;
     align-items: center;
-    padding-top: 70px;
     margin-top: -80px;
   }
-  .bitacora-banner .bitacora-text {
-    margin-left: 0 !important;
+  .bitacora-banner .bitacora-content .bitacora-text {
+    margin-left: 0;
     padding-left: 39px;
     width: 100%;
     text-align: center;
     margin-top: 240px;
   }
-  .bitacora-banner .bitacora-text h2, .bitacora-banner .bitacora-text .h2 {
+  .bitacora-banner .bitacora-content .bitacora-text h2, .bitacora-banner .bitacora-content .bitacora-text .h2 {
     margin-top: 39px;
   }
   .proyecto-header h1, .proyecto-header .h1 {
@@ -13311,5 +13306,8 @@ footer {
     opacity: 1;
     max-height: 300px;
     transform: translateY(0);
+  }
+  footer {
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */

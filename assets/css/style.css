@@ -12904,6 +12904,7 @@ blockquote {
   font-weight: 400;
   font-size: 24px;
   letter-spacing: 3%;
+  overflow-wrap: break-word;
 }
 .bitacora-card h3 a, .bitacora-card .h3 a {
   color: var(--texto-principal);

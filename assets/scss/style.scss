@@ -927,6 +927,7 @@ blockquote {
     font-weight: 400;
     font-size: 24px;
     letter-spacing: 3%;
+    overflow-wrap: break-word;
 
     a {
         color: var(--texto-principal);

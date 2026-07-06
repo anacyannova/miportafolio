@@ -13162,10 +13162,6 @@ footer {
   .projects-grid .project-card {
     width: 100%;
   }
-  .projects-grid .project-card h3, .projects-grid .project-card .h3,
-  .projects-grid .project-category {
-    padding-left: 24px;
-  }
   .bio-skills {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -13205,7 +13201,7 @@ footer {
   }
   .bitacora-banner .bitacora-content .bitacora-text {
     margin-left: 0;
-    padding-left: 39px;
+    padding: 15px;
     width: 100%;
     text-align: center;
     margin-top: 240px;

@@ -1201,9 +1201,9 @@ footer {
     }
 
     .projects-grid {
-        .project-card { width: 100%; }
-        .project-card h3,
-        .project-category { padding-left: 24px; }
+        .project-card { 
+            width: 100%; 
+        }
     }
 
     .bio-skills {
@@ -1248,7 +1248,7 @@ footer {
             margin-top: -80px;
             .bitacora-text{
                 margin-left: 0;
-                padding-left: 39px;
+                padding: 15px;
                 width: 100%;
                 text-align: center;
                 margin-top: 240px;

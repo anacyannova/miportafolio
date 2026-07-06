@@ -1263,6 +1263,27 @@ footer {
 
     // *** single proyecto mobile *** //
 
+    .proyecto-resumen {
+        padding: 40px 24px;
+        grid-template-columns: 1fr;
+
+        .proyecto-tags {
+            width: 100%;
+            justify-content: flex-end;
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            grid-column: 1;
+        }
+
+        p {
+            grid-column: 1;
+            max-width: 100%;
+        }
+    }
+
     .proyecto-header h1 {
         word-break: normal;
         overflow-wrap: break-word;
@@ -1323,8 +1344,12 @@ footer {
         .detalles-botones {
             grid-column: 1;
             grid-row: 3;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
         }
     }
+
     // *** servicios mobile *** //
     .pasos-track {
         flex-direction: column;
@@ -1377,5 +1402,30 @@ footer {
     }
     footer{
         text-align: center;
+    }
+}
+
+
+@include tablet {
+    :root {
+        --content-padding-right: 40px;
+        --grid-gap: 60px;
+        --section-gap-large: 110px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 320px;
+    }
+
+    .bitacora-banner {
+        .bitacora-image {
+            left: 40px;
+            width: 260px;
+        }
+
+        .bitacora-content .bitacora-text {
+            width: 320px;
+            margin-left: 340px;
+        }
     }
 }

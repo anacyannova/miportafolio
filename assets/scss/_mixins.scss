@@ -5,6 +5,13 @@
     }
 }
 
+@mixin tablet {
+    @media (min-width: 901px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+
 @mixin truncar {
     overflow: hidden;
     white-space: nowrap;

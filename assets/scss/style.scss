@@ -28,7 +28,7 @@ h1 {
 }
 
 p {
-    font-size: 18px;
+    font-size: var(--p-regular);
     line-height: 1.7;
 }
 
@@ -160,7 +160,7 @@ main {
 
 
 
-// *************************** HOME ***************************** //
+// *************************** INDEX ***************************** //
 
 .hero {
     display: grid;
@@ -182,19 +182,20 @@ main {
     margin-top: 0;
 }
 
-.hero-text h1 {
-    padding-right: 60px;
-}
-
-.hero h2 {
-    margin-top: 20px;
-    font-size: var(--h2-estandar);
-}
-
-.hero p {
-    margin-top: 25px;
-    max-width: 400px;
-}
+.hero-text{
+    h1 {
+        padding-right: 60px;
+    }
+    h2 {
+        margin-top: 20px;
+        font-size: var(--h2-estandar);
+    }
+    p {
+        margin-top: 20px;
+        max-width: 400px;
+        font-size: var(--p-subtitle);
+    }
+} 
 
 .hero-image img {
     width: 100%;
@@ -341,6 +342,11 @@ blockquote {
         font-size: var(--h1-pagina);
         letter-spacing: 3%;
         line-height: 1.1;
+    }
+    p{
+        margin-top: 20px;
+        max-width: 500px;
+        font-size: var(--p-subtitle);
     }
 }
 
@@ -648,8 +654,8 @@ blockquote {
 
     p {
         margin-top: 20px;
-        font-size: 24px;
-        font-weight: 300;
+        max-width: 500px;
+        font-size: var(--p-subtitle);
     }
 }
 
@@ -848,6 +854,7 @@ blockquote {
     p {
         margin-top: 20px;
         max-width: 500px;
+        font-size: var(--p-subtitle);
     }
 }
 

@@ -34,6 +34,8 @@
   --h1-pagina: 54px;
   --h2-estandar: 36px;
   --h3-estandar: 30px;
+  --p-regular: 18px;
+  --p-subtitle: 24px;
   --sidebar-width: 220px;
   --content-padding-right: 80px;
   --page-start: 90px;
@@ -12063,7 +12065,7 @@ h1, .h1 {
 }
 
 p {
-  font-size: 18px;
+  font-size: var(--p-regular);
   line-height: 1.7;
 }
 
@@ -12219,15 +12221,14 @@ main {
 .hero-text h1, .hero-text .h1 {
   padding-right: 60px;
 }
-
-.hero h2, .hero .h2 {
+.hero-text h2, .hero-text .h2 {
   margin-top: 20px;
   font-size: var(--h2-estandar);
 }
-
-.hero p {
-  margin-top: 25px;
+.hero-text p {
+  margin-top: 20px;
   max-width: 400px;
+  font-size: var(--p-subtitle);
 }
 
 .hero-image img {
@@ -12361,6 +12362,11 @@ blockquote {
   font-size: var(--h1-pagina);
   letter-spacing: 3%;
   line-height: 1.1;
+}
+.proyectos-header p {
+  margin-top: 20px;
+  max-width: 500px;
+  font-size: var(--p-subtitle);
 }
 
 .project-media {
@@ -12654,8 +12660,8 @@ blockquote {
 }
 .servicios-header p {
   margin-top: 20px;
-  font-size: 24px;
-  font-weight: 300;
+  max-width: 500px;
+  font-size: var(--p-subtitle);
 }
 
 .servicios-accordion {
@@ -12833,6 +12839,7 @@ blockquote {
 .bitacora-header p {
   margin-top: 20px;
   max-width: 500px;
+  font-size: var(--p-subtitle);
 }
 
 .bitacora-filtros {

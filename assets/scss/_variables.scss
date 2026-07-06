@@ -32,17 +32,20 @@
     --btn-letra-hover:    #F5F7FA;
 }
 
-
 :root {
     // tipografía
     --font-titulo: 'Outfit', sans-serif;
     --font-texto:  'Nunito Sans', sans-serif;
 
-    // escala de títulos desktop/tablet
+    // títulos desktop/tablet
     --h1-hero:     63px;
     --h1-pagina:   54px;
     --h2-estandar: 36px;
     --h3-estandar: 30px;
+
+    // p
+    --p-regular: 18px;
+    --p-subtitle: 24px;
 
     // layout
     --sidebar-width: 220px;

@@ -341,3 +341,15 @@ if (typeof AOS !== 'undefined') {
         offset: 80
     });
 }
+
+// *** active en el menu  ***
+document.addEventListener('DOMContentLoaded', () => {
+    let pagina = window.location.pathname.split('/').pop().split('?')[0].split('#')[0];
+    if (pagina === '') pagina = 'index.html';
+
+    document.querySelectorAll('#sidebar a[href]').forEach(link => {
+        if (link.getAttribute('href') === pagina) {
+            link.classList.add('active');
+        }
+    });
+});

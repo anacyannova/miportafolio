@@ -37,7 +37,6 @@ main {
     padding-right: var(--content-padding-right);
 }
 
-
 // *** componentes globales *** //
 
 .page-header {
@@ -141,6 +140,10 @@ main {
     &:hover {
         color: var(--acento);
     }
+}
+
+.sidebar nav a.active {
+    color: var(--acento);
 }
 
 .social-icon {
@@ -671,7 +674,7 @@ blockquote {
 }
 
 .servicios-accordion-item:last-child {
-    border-bottom: none; // revisar si esto queda  onnoooo
+    border-bottom: none;
 }
 
 .servicios-accordion-trigger {
@@ -735,6 +738,10 @@ blockquote {
 
 .servicios-accordion-trigger[aria-expanded="true"] .servicios-accordion-icon::after {
     transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.servicios-accordion-trigger[aria-expanded="true"] h3 {
+    color: var(--acento);
 }
 
 .servicios-accordion-panel {

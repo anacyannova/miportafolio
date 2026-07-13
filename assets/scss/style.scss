@@ -1194,17 +1194,9 @@ footer {
 }
 
 
-
-
 // ************************ RESPONSIVE **************************// 
 
-@include mobile {
-    :root {
-        --h1-hero: 54px;
-        --h1-pagina: 46px;
-        --h2-estandar: 30px;
-        --h3-estandar: 26px;
-    }
+@include menu-compacto {
     .menu-toggle {
         display: flex;
         flex-direction: column;
@@ -1241,34 +1233,7 @@ footer {
         margin-left: 0;
         padding: 30px 24px 40px;
     }
-    // *** index mobile *** //
-    .hero {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        min-height: auto;
-    }
-    .hero-image { 
-        order: 2;
-        width: 90%;
-        max-width: 390px;
-        margin: 30px auto 0;
-    }
-    .projects-grid {
-        .project-card { 
-            width: 100%; 
-        }
-    }
-    .bio-skills {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        margin-top: 80px;
-    }
-    .services-grid .service-card { 
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom: 9px;
-    }
-    // *** bitacora mobile *** //
+    // *** bitacora apilada: celulares + tablets en vertical *** //
     .bitacora-banner {
         height: auto;
         display: flex;
@@ -1306,6 +1271,42 @@ footer {
             }
         
         }
+    }
+}
+
+@include mobile {
+    :root {
+        --h1-hero: 54px;
+        --h1-pagina: 46px;
+        --h2-estandar: 30px;
+        --h3-estandar: 26px;
+    }
+    // *** index mobile *** //
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        min-height: auto;
+    }
+    .hero-image { 
+        order: 2;
+        width: 90%;
+        max-width: 390px;
+        margin: 30px auto 0;
+    }
+    .projects-grid {
+        .project-card { 
+            width: 100%; 
+        }
+    }
+    .bio-skills {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 80px;
+    }
+    .services-grid .service-card { 
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 9px;
     }
     // *** single proyecto mobile *** //
     .proyecto-resumen {
@@ -1492,14 +1493,41 @@ footer {
     .hero {
         grid-template-columns: 1fr 320px;
     }
+}
+
+@include tablet-horizontal {
     .bitacora-banner {
+        height: auto;
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        padding: 70px 6%;
+
         .bitacora-image {
-            left: 40px;
-            width: 260px;
+            position: relative;
+            left: auto;
+            top: auto;
+            width: 34%;
+            max-width: 300px;
+            margin-right: -60px;
+            z-index: 2;
+            flex-shrink: 0;
         }
-        .bitacora-content .bitacora-text {
-            width: 320px;
-            margin-left: 340px;
+
+        .bitacora-content {
+            position: static;
+            width: 55%;
+            max-width: 480px;
+            height: auto;
+            align-self: stretch;
+            padding: 50px 40px 50px 100px;
+
+            .bitacora-text {
+                width: 100%;
+                margin-left: 0;
+            }
         }
     }
 }

@@ -10,6 +10,20 @@
     }
 }
 
+@mixin menu-compacto {
+    // celulares en cualquier orientacion + tablets en vertical sin importar su tamaño
+    @media (max-width: 900px), (max-width: 1200px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin tablet-horizontal {
+    // solo tablets en horizontal real
+    @media (min-width: 901px) and (max-width: 1200px) and (orientation: landscape) {
+        @content;
+    }
+}
+
 @mixin truncar {
     overflow: hidden;
     white-space: nowrap;
